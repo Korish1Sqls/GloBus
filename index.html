@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GloBus - Автобусные билеты</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Шапка сайта с переключателем языка -->
+        <header class="header">
+            <div class="header-container">
+                <div class="header-left">
+                    <button class="burger-trigger" id="burgerTrigger">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="logo">
+                        <i class="fas fa-bus"></i>
+                        <span>GloBus</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="header-actions">
+                        <!-- Переключатель языка -->
+                        <div class="language-selector">
+                            <button class="language-btn" id="languageBtn">
+                                <i class="fas fa-globe"></i>
+                                <span id="currentLanguage">Русский</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="language-dropdown" id="languageDropdown">
+                                <div class="language-option active" data-lang="ru">
+                                    <span class="language-flag">🇷🇺</span>
+                                    <span class="language-name">Русский</span>
+                                    <span class="language-check"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="language-option" data-lang="kz">
+                                    <span class="language-flag">🇰🇿</span>
+                                    <span class="language-name">Қазақша</span>
+                                    <span class="language-check"></span>
+                                </div>
+                                <div class="language-option" data-lang="en">
+                                    <span class="language-flag">🇬🇧</span>
+                                    <span class="language-name">English</span>
+                                    <span class="language-check"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="user-menu-btn" id="userMenuBtn">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="headerUserName">Войти</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Бургер-меню -->
+        <div class="burger-overlay" id="burgerOverlay"></div>
+        <nav class="burger-menu" id="burgerMenu">
+            <div class="burger-header">
+                <div class="burger-logo">
+                    <i class="fas fa-bus"></i>
+                    <span>GloBus</span>
+                </div>
+                <button class="burger-close" id="burgerClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="burger-user-section" id="burgerUserSection">
+                <div class="user-not-auth" id="userNotAuth">
+                    <div class="user-avatar-large">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <p class="user-greeting" data-i18n="welcome">Добро пожаловать!</p>
+                        <button class="btn-outline" id="burgerLoginBtn">
+                            <i class="fas fa-sign-in-alt"></i> <span data-i18n="login">Войти</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="user-auth" id="userAuth" style="display: none;">
+                    <div class="user-avatar-large" id="burgerAvatar">
+                        <img src="" alt="Avatar" style="display: none; width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                        <i class="fas fa-user-circle" id="burgerAvatarIcon"></i>
+                    </div>
+                    <div class="user-info">
+                        <p class="user-name" id="burgerUserName">Имя пользователя</p>
+                        <p class="user-email" id="burgerUserEmail">email@example.com</p>
+                        <div class="user-bonus">
+                            <i class="fas fa-coins"></i>
+                            <span id="burgerUserBonus">500</span> <span data-i18n="bonuses">бонусов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="burger-menu-section">
+                <h3 class="burger-section-title" data-i18n="navigation">Навигация</h3>
+                <ul class="burger-nav">
+                    <li><a href="#" class="burger-nav-link active" data-page="home"><i class="fas fa-home"></i> <span data-i18n="home">Главная</span></a></li>
+                    <li><a href="#" class="burger-nav-link" data-page="profile"><i class="fas fa-user"></i> <span data-i18n="profile">Личный кабинет</span></a></li>
+                    <li><a href="#" class="burger-nav-link" data-page="reviews"><i class="fas fa-star"></i> <span data-i18n="reviews">Отзывы</span></a></li>
+                    <li><a href="#" class="burger-nav-link" data-page="trips"><i class="fas fa-clock"></i> <span data-i18n="myTrips">Мои поездки</span></a></li>
+                    <li><a href="#" class="burger-nav-link" data-page="bonus"><i class="fas fa-gift"></i> <span data-i18n="bonusProgram">Бонусная программа</span></a></li>
+                    <li><a href="#" class="burger-nav-link" data-page="support"><i class="fas fa-headset"></i> <span data-i18n="support">Поддержка</span></a></li>
+                    <li id="burgerLogoutItem" style="display: none;"><a href="#" class="burger-nav-link" id="burgerLogout"><i class="fas fa-sign-out-alt"></i> <span data-i18n="logout">Выйти</span></a></li>
+                </ul>
+            </div>
+
+            <div class="burger-footer">
+                <div class="burger-social">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p>GloBus 2026</p>
+            </div>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main-content" id="mainContent">
+            <!-- Главная страница -->
+            <section id="home-page" class="page active-page">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h1 class="hero-title" data-i18n="heroTitle">Путешествуй с комфортом</h1>
+                        <p class="hero-subtitle" data-i18n="heroSubtitle">Более 5000 маршрутов по 15 странам</p>
+                    </div>
+                    
+                    <!-- Поиск билетов -->
+                    <div class="search-card">
+                        <div class="search-tabs">
+                            <button class="search-tab active" data-trip="oneway" data-i18n="oneWay">В одну сторону</button>
+                            <button class="search-tab" data-trip="roundtrip" data-i18n="roundTrip">Туда и обратно</button>
+                        </div>
+                        
+                        <div class="search-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fas fa-map-marker-alt"></i> <span data-i18n="from">Откуда</span></label>
+                                    <div class="location-group">
+                                        <div class="location-input">
+                                            <input type="text" id="fromLocation" class="location-field" value="Алматы, Казахстан" placeholder="Город отправления" autocomplete="off">
+                                            <button class="geo-btn" id="geoFrom"><i class="fas fa-location-dot"></i></button>
+                                        </div>
+                                        <div class="suggestions" id="fromSuggestions"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label><i class="fas fa-map-marker-alt"></i> <span data-i18n="to">Куда</span></label>
+                                    <div class="location-group">
+                                        <div class="location-input">
+                                            <input type="text" id="toLocation" class="location-field" value="Астана, Казахстан" placeholder="Город прибытия" autocomplete="off">
+                                            <button class="swap-btn" id="swapLocations"><i class="fas fa-exchange-alt"></i></button>
+                                        </div>
+                                        <div class="suggestions" id="toSuggestions"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fas fa-calendar"></i> <span data-i18n="date">Дата</span></label>
+                                    <input type="date" id="departDate" class="date-input">
+                                </div>
+                                
+                                <div class="form-group" id="returnDateGroup">
+                                    <label><i class="fas fa-calendar"></i> <span data-i18n="returnDate">Обратно</span></label>
+                                    <input type="date" id="returnDate" class="date-input">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label><i class="fas fa-users"></i> <span data-i18n="passengers">Пассажиры</span></label>
+                                    <div class="passenger-selector">
+                                        <button class="passenger-btn" id="passengerBtn">
+                                            <span id="passengerCount">1</span> <span data-i18n="passenger">пассажир</span>
+                                        </button>
+                                        <div class="passenger-dropdown" id="passengerDropdown">
+                                            <div class="passenger-type">
+                                                <span data-i18n="adults">Взрослые</span>
+                                                <div class="passenger-control">
+                                                    <button class="passenger-decr" data-type="adults">-</button>
+                                                    <span id="adultsCount">1</span>
+                                                    <button class="passenger-incr" data-type="adults">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="passenger-type">
+                                                <span data-i18n="children">Дети (до 12 лет)</span>
+                                                <div class="passenger-control">
+                                                    <button class="passenger-decr" data-type="children">-</button>
+                                                    <span id="childrenCount">0</span>
+                                                    <button class="passenger-incr" data-type="children">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="passenger-type">
+                                                <span data-i18n="infants">Младенцы</span>
+                                                <div class="passenger-control">
+                                                    <button class="passenger-decr" data-type="infants">-</button>
+                                                    <span id="infantsCount">0</span>
+                                                    <button class="passenger-incr" data-type="infants">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="search-actions">
+                                <button id="searchRouteBtn" class="btn-primary btn-large">
+                                    <i class="fas fa-search"></i> <span data-i18n="findTrips">Найти рейсы</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Карта -->
+                    <div class="map-section">
+                        <div class="map-header">
+                            <h2><i class="fas fa-map-marked-alt"></i> <span data-i18n="routeMap">Карта маршрутов</span></h2>
+                            <div class="map-controls">
+                                <button class="map-control-btn" id="zoomIn"><i class="fas fa-plus"></i></button>
+                                <button class="map-control-btn" id="zoomOut"><i class="fas fa-minus"></i></button>
+                                <button class="map-control-btn" id="resetMap"><i class="fas fa-home"></i></button>
+                            </div>
+                        </div>
+                        <div class="map-container">
+                            <div id="map" class="route-map"></div>
+                            <div class="map-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #2563eb;"></span>
+                                    <span data-i18n="route">Маршрут</span>
+                                </div>
+                                <div class="legend-distance" id="routeDistance">
+                                    <span data-i18n="distance">Расстояние</span>: 0 км
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Популярные направления -->
+                <div class="popular-section">
+                    <h2 data-i18n="popularRoutes">Популярные направления</h2>
+                    <div class="popular-grid" id="popularRoutes"></div>
+                </div>
+
+                <!-- Фильтры и рейсы -->
+                <div class="trips-wrapper">
+                    <div class="trips-header">
+                        <h2><span data-i18n="availableTrips">Доступные рейсы</span> <span class="badge" id="tripsCount">0</span></h2>
+                        
+                        <div class="trips-toolbar">
+                            <select id="sortTrips" class="sort-select">
+                                <option value="time-asc" data-i18n="timeAsc">По времени (сначала ранние)</option>
+                                <option value="time-desc" data-i18n="timeDesc">По времени (сначала поздние)</option>
+                                <option value="price-asc" data-i18n="priceAsc">По цене (сначала дешевые)</option>
+                                <option value="price-desc" data-i18n="priceDesc">По цене (сначала дорогие)</option>
+                            </select>
+                            
+                            <button class="filter-toggle-btn" id="filterToggle">
+                                <i class="fas fa-sliders-h"></i> <span data-i18n="filters">Фильтры</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filters-panel" id="filtersPanel" style="display: none;">
+                        <div class="filters-grid">
+                            <div class="filter-group">
+                                <label data-i18n="departureTime">Время отправления</label>
+                                <div class="time-range">
+                                    <input type="time" id="timeFrom" value="00:00">
+                                    <span>-</span>
+                                    <input type="time" id="timeTo" value="23:59">
+                                </div>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label data-i18n="price">Цена (₸)</label>
+                                <div class="price-range">
+                                    <input type="number" id="priceMin" placeholder="от">
+                                    <input type="number" id="priceMax" placeholder="до">
+                                </div>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label data-i18n="company">Перевозчик</label>
+                                <select id="filterCompany" class="filter-select" multiple size="3">
+                                    <option value="busline">BusLine</option>
+                                    <option value="ecobus">EcoBus</option>
+                                    <option value="express">Express</option>
+                                    <option value="skyway">SkyWay</option>
+                                    <option value="transvip">TransVIP</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-actions">
+                            <button class="btn-primary" id="applyFilters"><span data-i18n="apply">Применить</span></button>
+                            <button class="btn-outline" id="resetFilters"><span data-i18n="reset">Сбросить</span></button>
+                        </div>
+                    </div>
+
+                    <div id="tripsList" class="trips-list"></div>
+                    
+                    <div class="pagination" id="pagination"></div>
+                </div>
+            </section>
+
+            <!-- Личный кабинет -->
+            <section id="profile-page" class="page">
+                <h1 class="page-title" data-i18n="profile">Личный кабинет</h1>
+                
+                <div class="profile-dashboard">
+                    <div class="profile-sidebar">
+                        <div class="profile-card">
+                            <div class="profile-avatar-container">
+                                <div class="profile-avatar" id="profileAvatarContainer">
+                                    <img id="profileAvatarImg" src="" alt="Avatar" style="display: none; width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                                    <i class="fas fa-user-circle" id="profileAvatarIcon"></i>
+                                </div>
+                                <button class="avatar-edit-btn" id="avatarEditBtn">
+                                    <i class="fas fa-camera"></i>
+                                    <span data-i18n="changePhoto">Сменить фото</span>
+                                </button>
+                                <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                            </div>
+                            
+                            <div class="profile-level">
+                                <div class="level-badge" id="profileLevel">Бронзовый уровень</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="profileProgress" style="width: 0%;"></div>
+                                </div>
+                                <div class="profile-points">
+                                    <span id="profilePoints">0</span> <span data-i18n="tripsToNext">поездок до следующего уровня</span>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value" id="profileTrips">0</span>
+                                    <span class="stat-label" data-i18n="trips">Поездок</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value" id="profileBonus">0</span>
+                                    <span class="stat-label" data-i18n="bonuses">Бонусов</span>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-contact">
+                                <h4 data-i18n="contacts">Контакты</h4>
+                                <p class="contact-item"><i class="fas fa-envelope"></i> <span id="profileEmail">user@example.com</span></p>
+                                <p class="contact-item"><i class="fas fa-phone"></i> <span id="profilePhone">+7 (777) 123-45-67</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-content">
+                        <div class="profile-tabs">
+                            <button class="tab-btn active" data-tab="upcoming" data-i18n="upcoming">Предстоящие</button>
+                            <button class="tab-btn" data-tab="history" data-i18n="history">История</button>
+                            <button class="tab-btn" data-tab="bonus-history" data-i18n="bonusHistory">Бонусы</button>
+                            <button class="tab-btn" data-tab="settings" data-i18n="settings">Настройки</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="upcoming-tab">
+                            <div class="tickets-list" id="upcomingTickets"></div>
+                        </div>
+                        
+                        <div class="tab-content" id="history-tab">
+                            <div class="tickets-list" id="historyTickets"></div>
+                        </div>
+                        
+                        <div class="tab-content" id="bonus-history-tab">
+                            <div class="bonus-history-list" id="bonusHistoryList"></div>
+                        </div>
+                        
+                        <div class="tab-content" id="settings-tab">
+                            <form class="profile-form" id="profileSettingsForm">
+                                <div class="form-group">
+                                    <label data-i18n="name">Имя</label>
+                                    <input type="text" id="profileName" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" id="profileEmailInput" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label data-i18n="phone">Телефон</label>
+                                    <input type="tel" id="profilePhoneInput" class="form-input">
+                                </div>
+                                <button type="submit" class="btn-primary"><span data-i18n="saveChanges">Сохранить изменения</span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Мои поездки -->
+            <section id="trips-page" class="page">
+                <h1 class="page-title" data-i18n="myTrips">Мои поездки</h1>
+                
+                <div class="trips-stats-modern">
+                    <div class="stat-card-modern">
+                        <div class="stat-icon"><i class="fas fa-ticket-alt"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalTripsStat">0</span>
+                            <span class="stat-label" data-i18n="totalTrips">Всего поездок</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-modern">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalHoursStat">0 ч</span>
+                            <span class="stat-label" data-i18n="totalHours">В пути</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-modern">
+                        <div class="stat-icon"><i class="fas fa-coins"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalSpentStat">0 ₸</span>
+                            <span class="stat-label" data-i18n="totalSpent">Потрачено</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trips-timeline">
+                    <h3 data-i18n="tripsTimeline">Хронология поездок</h3>
+                    <div id="tripsTimeline" class="timeline"></div>
+                </div>
+            </section>
+            
+            <!-- Отзывы -->
+            <section id="reviews-page" class="page">
+                <h1 class="page-title" data-i18n="reviews">Отзывы пассажиров</h1>
+                
+                <div class="reviews-stats">
+                    <div class="stats-card">
+                        <div class="average-rating" id="avgRating">4.5</div>
+                        <div class="rating-stars" id="avgStars">★★★★★</div>
+                        <p data-i18n="averageRating">Средняя оценка</p>
+                    </div>
+                    <div class="stats-card">
+                        <div class="total-reviews" id="totalReviews">0</div>
+                        <p data-i18n="totalReviews">Всего отзывов</p>
+                    </div>
+                    <div class="stats-card">
+                        <div class="companies-count" id="companiesCount">0</div>
+                        <p data-i18n="companies">Перевозчиков</p>
+                    </div>
+                </div>
+                
+                <div class="reviews-filters">
+                    <select id="reviewCompanyFilter" class="filter-select">
+                        <option value="all" data-i18n="allCompanies">Все перевозчики</option>
+                    </select>
+                    <select id="reviewRatingFilter" class="filter-select">
+                        <option value="all" data-i18n="allRatings">Все рейтинги</option>
+                        <option value="5" data-i18n="rating5">5 звезд</option>
+                        <option value="4" data-i18n="rating4">4 звезды и выше</option>
+                        <option value="3" data-i18n="rating3">3 звезды и выше</option>
+                    </select>
+                    <select id="reviewSort" class="filter-select">
+                        <option value="newest" data-i18n="newest">Сначала новые</option>
+                        <option value="oldest" data-i18n="oldest">Сначала старые</option>
+                        <option value="highest" data-i18n="highest">Сначала высокие оценки</option>
+                        <option value="lowest" data-i18n="lowest">Сначала низкие оценки</option>
+                    </select>
+                    <button class="btn-primary" id="addReviewBtn">
+                        <i class="fas fa-plus"></i> <span data-i18n="writeReview">Написать отзыв</span>
+                    </button>
+                </div>
+                
+                <div id="reviewsGrid" class="reviews-grid"></div>
+                
+                <div class="load-more">
+                    <button class="btn-outline" id="loadMoreReviews"><span data-i18n="loadMore">Загрузить еще</span></button>
+                </div>
+            </section>
+
+            <!-- Бонусная программа -->
+            <section id="bonus-page" class="page">
+                <h1 class="page-title" data-i18n="bonusProgram">Бонусная программа</h1>
+                
+                <div class="bonus-levels">
+                    <div class="level-card" data-level="bronze">
+                        <i class="fas fa-medal"></i>
+                        <h3 data-i18n="bronze">Бронза</h3>
+                        <p>1% <span data-i18n="cashback">кэшбэк</span></p>
+                        <small data-i18n="bronzeRange">0-5 поездок</small>
+                    </div>
+                    <div class="level-card" data-level="silver">
+                        <i class="fas fa-medal"></i>
+                        <h3 data-i18n="silver">Серебро</h3>
+                        <p>2% <span data-i18n="cashback">кэшбэк</span></p>
+                        <small data-i18n="silverRange">6-20 поездок</small>
+                    </div>
+                    <div class="level-card" data-level="gold">
+                        <i class="fas fa-medal"></i>
+                        <h3 data-i18n="gold">Золото</h3>
+                        <p>3% <span data-i18n="cashback">кэшбэк</span></p>
+                        <small data-i18n="goldRange">21-50 поездок</small>
+                    </div>
+                    <div class="level-card" data-level="platinum">
+                        <i class="fas fa-crown"></i>
+                        <h3 data-i18n="platinum">Платина</h3>
+                        <p>5% <span data-i18n="cashback">кэшбэк</span></p>
+                        <small data-i18n="platinumRange">50+ поездок</small>
+                    </div>
+                </div>
+                
+                <div class="bonus-card">
+                    <h3><i class="fas fa-coins"></i> <span data-i18n="yourBonus">Ваш бонусный счет</span></h3>
+                    <div class="bonus-amount" id="bonusAmount">0 ₸</div>
+                    <p data-i18n="bonusInfo">Доступно для оплаты до 50% стоимости билетов</p>
+                    <div class="bonus-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%;"></div>
+                        </div>
+                        <p id="bonusNextLevel"><span data-i18n="tripsToNextLevel">0 поездок до следующего уровня</span></p>
+                    </div>
+                </div>
+                
+                <div class="bonus-history">
+                    <h3 data-i18n="bonusHistory">История начислений и списаний</h3>
+                    <div class="bonus-list" id="bonusHistory"></div>
+                </div>
+            </section>
+            
+            <!-- Поддержка -->
+            <section id="support-page" class="page">
+                <h1 class="page-title" data-i18n="support">Служба поддержки</h1>
+                
+                <div class="support-chat">
+                    <div class="chat-header">
+                        <div class="chat-status online">
+                            <i class="fas fa-circle"></i> <span data-i18n="online">Оператор онлайн</span>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="btn-icon" id="clearChatBtn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message support">
+                            <div class="message-content" data-i18n="welcomeMessage">
+                                Здравствуйте! Чем я могу вам помочь? Вы можете выбрать один из готовых вопросов ниже или написать свой.
+                            </div>
+                            <div class="message-time">10:00</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Готовые фразы -->
+                    <div class="chat-suggestions" id="chatSuggestions">
+                        <button class="suggestion-chip" data-question="Как купить билет?" data-i18n="howToBuy">Как купить билет?</button>
+                        <button class="suggestion-chip" data-question="Как вернуть билет?" data-i18n="howToReturn">Как вернуть билет?</button>
+                        <button class="suggestion-chip" data-question="Бонусная программа" data-i18n="bonusProgramQuestion">Бонусная программа</button>
+                        <button class="suggestion-chip" data-question="Проблема с оплатой" data-i18n="paymentProblem">Проблема с оплатой</button>
+                        <button class="suggestion-chip" data-question="Где мой билет?" data-i18n="whereIsMyTicket">Где мой билет?</button>
+                        <button class="suggestion-chip" data-question="Смена даты" data-i18n="changeDate">Смена даты</button>
+                        <button class="suggestion-chip" data-question="Багаж" data-i18n="luggage">Багаж</button>
+                        <button class="suggestion-chip" data-question="Животные" data-i18n="pets">Животные в автобусе</button>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" placeholder="Напишите сообщение..." id="chatInput" data-i18n-placeholder="typeMessage">
+                        <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+                
+                <div class="faq-section">
+                    <h3 data-i18n="faq">Часто задаваемые вопросы</h3>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span data-i18n="howToBuy">Как купить билет?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer" data-i18n="howToBuyAnswer">
+                                Выберите маршрут на главной странице, укажите дату и количество пассажиров. Нажмите "Найти рейсы", выберите подходящий рейс и нажмите "Купить". Следуйте инструкциям по выбору мест, заполнению данных пассажиров и оплате. После оплаты билет появится в разделе "Мои поездки".
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span data-i18n="howToReturn">Как вернуть билет?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer" data-i18n="howToReturnAnswer">
+                                Вернуть билет можно в личном кабинете в разделе "Мои поездки". Нажмите на билет и выберите "Вернуть билет". Возврат возможен не позднее чем за 2 часа до отправления. Деньги вернутся на карту в течение 3-5 рабочих дней. При возврате бонусы не возвращаются.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span data-i18n="bonusProgramQuestion">Как работает бонусная программа?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer" data-i18n="bonusProgramAnswer">
+                                За каждую поездку, оплаченную картой, вы получаете бонусы: 1% при бронзовом уровне, 2% при серебряном, 3% при золотом и 5% при платиновом. Бонусами можно оплатить до 30% стоимости следующих поездок. Уровень повышается с количеством поездок.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span data-i18n="pets">Можно ли перевезти животных?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer" data-i18n="petsAnswer">
+                                Да, перевозка животных разрешена при наличии ветеринарного паспорта. Животное должно находиться в переноске. Стоимость перевозки животного равна стоимости детского билета. Служебные собаки-поводыри перевозятся бесплатно.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span data-i18n="late">Что делать, если я опоздал на автобус?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer" data-i18n="lateAnswer">
+                                Если вы опоздали на автобус, билет считается использованным и деньги не возвращаются. Вы можете связаться со службой поддержки для возможного переноса на другой рейс при наличии свободных мест, но это будет платно.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span data-i18n="changeDate">Как изменить дату поездки?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer" data-i18n="changeDateAnswer">
+                                Изменить дату можно в разделе "Мои поездки". Выберите билет и нажмите "Изменить дату". Доступно не позднее чем за 24 часа до отправления. Разница в стоимости билетов доплачивается или возвращается. Комиссия за изменение даты - 300 тенге.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Модальное окно входа/регистрации -->
+        <div id="authModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="authModalTitle" data-i18n="login">Вход в аккаунт</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="loginTab" data-i18n="login">Вход</button>
+                    <button class="auth-tab" id="registerTab" data-i18n="register">Регистрация</button>
+                </div>
+                
+                <form id="authForm" class="modal-form">
+                    <div id="registerFields" style="display: none;">
+                        <div class="form-group">
+                            <label data-i18n="name">Имя</label>
+                            <input type="text" id="regName" class="form-input" placeholder="Иван Иванов">
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="phone">Телефон</label>
+                            <input type="tel" id="regPhone" class="form-input" placeholder="+7 777 123 45 67">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="authEmail" class="form-input" required placeholder="example@mail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-i18n="password">Пароль</label>
+                        <input type="password" id="authPassword" class="form-input" required placeholder="••••••••">
+                    </div>
+                    
+                    <div id="regConfirmField" style="display: none;">
+                        <div class="form-group">
+                            <label data-i18n="confirmPassword">Подтвердите пароль</label>
+                            <input type="password" id="regConfirm" class="form-input" placeholder="••••••••">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full" id="authSubmitBtn"><span data-i18n="login">Войти</span></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Модальное окно покупки билетов -->
+        <div id="purchaseModal" class="modal">
+            <div class="modal-content modal-purchase">
+                <div class="modal-header">
+                    <h2 data-i18n="purchaseTickets">Покупка билетов</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                
+                <div class="purchase-progress">
+                    <div class="progress-step active" data-i18n="step1">1. Выбор мест</div>
+                    <div class="progress-step" data-i18n="step2">2. Данные пассажиров</div>
+                    <div class="progress-step" data-i18n="step3">3. Оплата</div>
+                    <div class="progress-step" data-i18n="step4">4. Подтверждение</div>
+                </div>
+                
+                <div class="purchase-content">
+                    <!-- Шаг 1: Выбор мест -->
+                    <div class="purchase-step" id="step1">
+                        <h3><i class="fas fa-chair"></i> <span data-i18n="selectSeats">Выберите места</span></h3>
+                        <div class="bus-scheme-container">
+                            <div class="bus-layout" id="busScheme"></div>
+                            <div class="seat-legend">
+                                <div class="legend-item"><span class="seat-sample free"></span> <span data-i18n="free">Свободно</span></div>
+                                <div class="legend-item"><span class="seat-sample selected"></span> <span data-i18n="selected">Выбрано</span></div>
+                                <div class="legend-item"><span class="seat-sample occupied"></span> <span data-i18n="occupied">Занято</span></div>
+                                <div class="legend-item"><span class="seat-sample vip"></span> VIP</div>
+                            </div>
+                        </div>
+                        <div class="selected-info">
+                            <span data-i18n="selectedSeats">Выбрано мест</span>: <span id="selectedCount">0</span> • <span data-i18n="totalAmount">Сумма</span>: <span id="selectedSum">0</span> ₸
+                        </div>
+                    </div>
+                    
+                    <!-- Шаг 2: Данные пассажиров -->
+                    <div class="purchase-step" id="step2" style="display: none;">
+                        <h3><i class="fas fa-users"></i> <span data-i18n="passengerData">Данные пассажиров</span></h3>
+                        <div id="passengerForm"></div>
+                    </div>
+                    
+                    <!-- Шаг 3: Оплата -->
+                    <div class="purchase-step" id="step3" style="display: none;">
+                        <h3><i class="fas fa-credit-card"></i> <span data-i18n="payment">Оплата</span></h3>
+                        
+                        <div class="payment-summary">
+                            <div class="summary-row">
+                                <span data-i18n="ticketPrice">Стоимость билетов</span>
+                                <span id="paymentTicketPrice">0 ₸</span>
+                            </div>
+                            <div class="summary-row bonus-row" id="paymentBonusRow" style="display: none;">
+                                <span data-i18n="bonuses">Бонусы</span>
+                                <span id="paymentBonusAmount">-0 ₸</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span data-i18n="total">ИТОГО</span>
+                                <span id="paymentTotal">0 ₸</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Бонусы - показываются только для карты -->
+                        <div class="bonus-section" id="bonusSection" style="display: none;">
+                            <h4><i class="fas fa-coins"></i> <span data-i18n="useBonuses">Использовать бонусы</span></h4>
+                            <p class="bonus-balance"><span data-i18n="available">Доступно</span>: <span id="availableBonus">0</span> ₸</p>
+                            
+                            <div class="bonus-slider-container">
+                                <input type="range" id="bonusSlider" min="0" max="0" value="0" step="10" class="bonus-slider">
+                                <div class="bonus-values">
+                                    <span>0 ₸</span>
+                                    <span id="maxBonusAmount">0 ₸</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Способы оплаты -->
+                        <div class="payment-methods">
+                            <div class="payment-method-card" onclick="selectPaymentMethod('card')">
+                                <input type="radio" name="payment" id="paymentCard" value="card" class="payment-radio" checked>
+                                <div class="payment-card-content">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span data-i18n="cardPayment">Банковская карта</span>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-method-card" onclick="selectPaymentMethod('cash')">
+                                <input type="radio" name="payment" id="paymentCash" value="cash" class="payment-radio">
+                                <div class="payment-card-content">
+                                    <i class="fas fa-money-bill"></i>
+                                    <span data-i18n="cashPayment">Наличные водителю</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Детали карты -->
+                        <div class="card-details" id="cardDetails">
+                            <div class="form-group">
+                                <label data-i18n="cardNumber">Номер карты</label>
+                                <input type="text" id="cardNumber" class="form-input" placeholder="0000 0000 0000 0000">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label data-i18n="expiry">Срок</label>
+                                    <input type="text" id="cardExpiry" class="form-input" placeholder="MM/ГГ">
+                                </div>
+                                <div class="form-group">
+                                    <label>CVV</label>
+                                    <input type="text" id="cardCvv" class="form-input" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Информация о бонусах для наличных -->
+                        <div class="cash-info" id="cashInfo" style="display: none;">
+                            <p><i class="fas fa-info-circle"></i> <span data-i18n="cashInfo">При оплате наличными бонусы не начисляются</span></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Шаг 4: Подтверждение -->
+                    <div class="purchase-step" id="step4" style="display: none;">
+                        <h3><i class="fas fa-check-circle"></i> <span data-i18n="confirmation">Подтверждение</span></h3>
+                        
+                        <div class="confirmation-card">
+                            <div class="confirmation-row">
+                                <span data-i18n="route">Маршрут</span>
+                                <span id="confirmRoute"></span>
+                            </div>
+                            <div class="confirmation-row">
+                                <span data-i18n="dateTime">Дата и время</span>
+                                <span id="confirmDateTime"></span>
+                            </div>
+                            <div class="confirmation-row">
+                                <span data-i18n="company">Перевозчик</span>
+                                <span id="confirmCompany"></span>
+                            </div>
+                            <div class="confirmation-row">
+                                <span data-i18n="seats">Места</span>
+                                <span id="confirmSeats"></span>
+                            </div>
+                            <div class="confirmation-row">
+                                <span data-i18n="passengers">Пассажиры</span>
+                                <span id="confirmPassengers"></span>
+                            </div>
+                            <div class="confirmation-row">
+                                <span data-i18n="paymentMethod">Способ оплаты</span>
+                                <span id="confirmPaymentMethod">Банковская карта</span>
+                            </div>
+                            <div class="confirmation-divider"></div>
+                            <div class="confirmation-row total">
+                                <span data-i18n="total">К оплате</span>
+                                <span id="confirmTotal"></span>
+                            </div>
+                            <div class="confirmation-row" id="confirmBonusEarned" style="display: none;">
+                                <span data-i18n="bonusEarned">Будет начислено бонусов</span>
+                                <span id="bonusEarnedAmount">0</span>
+                            </div>
+                        </div>
+                        
+                        <label class="checkbox">
+                            <input type="checkbox" id="agreeTerms">
+                            <span data-i18n="agreeTerms">Я согласен с условиями покупки</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="purchase-footer">
+                    <button class="btn-outline" id="prevStep" style="display: none;">
+                        <i class="fas fa-chevron-left"></i> <span data-i18n="back">Назад</span>
+                    </button>
+                    <button class="btn-primary" id="nextStep"><span data-i18n="next">Далее</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно деталей билета -->
+        <div id="ticketModal" class="modal">
+            <div class="modal-content modal-ticket">
+                <div class="modal-header">
+                    <h2 data-i18n="ticketDetails">Детали билета</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                
+                <div class="ticket-detail-content" id="ticketDetailContent"></div>
+                
+                <div class="ticket-detail-footer">
+                    <button class="btn-primary" id="printTicketBtn">
+                        <i class="fas fa-print"></i> <span data-i18n="print">Печать</span>
+                    </button>
+                    <button class="btn-primary" id="pdfTicketBtn">
+                        <i class="fas fa-file-pdf"></i> PDF
+                    </button>
+                    <button class="btn-outline" id="completeTripBtn" style="display: none;">
+                        <i class="fas fa-check-circle"></i> <span data-i18n="complete">Завершить поездку</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно написания отзыва -->
+        <div id="reviewModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 data-i18n="writeReview">Написать отзыв</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                
+                <form id="reviewForm" class="modal-form">
+                    <div class="form-group">
+                        <label data-i18n="trip">Поездка</label>
+                        <select id="reviewTrip" class="form-input" required>
+                            <option value="" data-i18n="selectTrip">Выберите поездку</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-i18n="company">Перевозчик</label>
+                        <select id="reviewCompany" class="form-input" required>
+                            <option value="" data-i18n="selectCompany">Выберите перевозчика</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-i18n="rating">Оценка</label>
+                        <div class="rating-input" id="ratingStars">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="reviewRating" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-i18n="title">Заголовок</label>
+                        <input type="text" id="reviewTitle" class="form-input" required placeholder="Кратко о поездке">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-i18n="review">Отзыв</label>
+                        <textarea id="reviewText" class="form-input" rows="4" required placeholder="Поделитесь впечатлениями о поездке"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="pros">Плюсы</label>
+                            <input type="text" id="reviewPros" class="form-input" placeholder="Чисто, комфортно, вежливый водитель">
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="cons">Минусы</label>
+                            <input type="text" id="reviewCons" class="form-input" placeholder="Опоздание, холодно">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full"><span data-i18n="publish">Опубликовать отзыв</span></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Модальное окно успешной покупки -->
+        <div id="successModal" class="modal">
+            <div class="modal-content" style="max-width: 400px; text-align: center;">
+                <div class="modal-header">
+                    <h2 data-i18n="purchaseSuccess">Покупка завершена!</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body" style="padding: 2rem;">
+                    <i class="fas fa-check-circle" style="font-size: 5rem; color: #10b981; margin-bottom: 1rem;"></i>
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;" data-i18n="ticketsSuccess">Билеты успешно приобретены!</p>
+                    <p style="color: #475569; margin-bottom: 1rem;"><span data-i18n="bonusEarned">Начислено</span> <span id="earnedBonus">0</span> <span data-i18n="bonuses">бонусов</span></p>
+                    <button class="btn-primary" onclick="closeModal('successModal')" style="margin-top: 1.5rem;" data-i18n="great">Отлично</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
