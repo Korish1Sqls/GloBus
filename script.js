@@ -59,7 +59,10 @@ const Translations = {
         'buy_btn': 'Купить',
         'seats_label': 'Места',
         'pass_short': 'пасс',
+        'bronze_level': 'Бронзовый уровень',
         'silver_level': 'Серебряный уровень',
+        'gold_level': 'Золотой уровень',
+        'platinum_level': 'Платиновый уровень',
         'card_payment': 'Банковская карта',
         'cash_payment': 'Наличные водителю',
         'route_label': 'Маршрут',
@@ -76,7 +79,6 @@ const Translations = {
         'status_completed': 'Завершена',
         'verified_badge': 'Проверено',
         'all_carriers': 'Все перевозчики',
-        'platinum_level': 'Платина',
         'bonus_accrual': 'Начисление бонусов за поездку',
         'trips_to_gold': 'поездок до уровня Золота',
         'operator_online': 'Оператор онлайн',
@@ -279,65 +281,11 @@ const Translations = {
         'november': 'Ноября',
         'december': 'Декабря',
         
-        // Отзывы (образцы)
-        'letter_a': 'А',
-        'alexey_petrov': 'Алексей Петров',
-        'verified_status': 'Проверено',
-        'date_01032026': '01.03.2026',
-        'rating_5stars': '★★★★★',
-        'company_busline': 'BusLine',
-        'review_title_excellent': 'Отличный сервис',
-        'review_text_excellent': 'Очень понравилась поездка! Автобус чистый, кондиционер работал отлично, водитель вежливый. Приехали точно по расписанию. Обязательно буду пользоваться еще!',
-        'pros_clean': 'Чисто, комфортно, вежливый водитель',
-        'cons_none': 'Не обнаружил',
-        'letter_o': 'О',
-        'olga_kozlova': 'Ольга Козлова',
-        'date_28022026': '28.02.2026',
-        'company_skyway': 'SkyWay',
-        'review_title_wonderful': 'Прекрасная поездка',
-        'review_text_wonderful': 'Очень довольна! Автобус новый, очень удобные кресла, есть розетки, wi-fi. Водитель профессионал. Время в пути пролетело незаметно.',
-        'pros_new_bus': 'Новый автобус, розетки, wi-fi',
-        'cons_none_alt': 'Нет',
-        'letter_e': 'Е',
-        'elena_smirnova': 'Елена Смирнова',
-        'date_26022026': '26.02.2026',
-        'rating_4stars': '★★★★☆',
-        'company_ecobus': 'EcoBus',
-        'review_title_good': 'Хорошо, но есть нюансы',
-        'review_text_good': 'В целом поездка прошла хорошо. Автобус комфортный, есть wi-fi, но он работал с перебоями. В остальном все отлично.',
-        'pros_comfortable': 'Комфортные кресла, чисто',
-        'cons_wifi': 'Wi-Fi работал плохо',
-        'letter_s': 'С',
-        'sergey_morozov': 'Сергей Морозов',
-        'date_24022026': '24.02.2026',
-        'company_transvip': 'TransVIP',
-        'review_title_vip': 'VIP-уровень',
-        'review_text_vip': 'Поездка на высшем уровне! Очень комфортный автобус, мало мест, много пространства. Кормили, давали воду. Цена оправдана.',
-        'pros_comfort_service': 'Комфорт, сервис, питание',
-        'cons_price': 'Цена высоковата',
-        'letter_d': 'Д',
-        'dmitry_ivanov': 'Дмитрий Иванов',
-        'date_21022026': '21.02.2026',
-        'rating_3stars': '★★★☆☆',
-        'company_express': 'Express',
-        'review_title_average': 'Средненько',
-        'review_text_average': 'Автобус староват, кондиционер не справлялся с жарой. Водитель ехал аккуратно, но опоздали на 40 минут.',
-        'pros_price_only': 'Цена',
-        'cons_old_bus': 'Старый автобус, опоздание',
-        
         // Разное
         'time_2144': '21:44',
         'how_to_buy_question': 'Как купить билет?',
         'time_2212': '22:12',
         'how_to_return_question': 'Как вернуть билет?',
-        'kz_how_to_buy': 'Билетті қалай сатып алуға болады?',
-        'kz_how_to_return': 'Билетті қалай қайтаруға болады?',
-        'kz_bonus_program': 'Бонустық бағдарлама',
-        'kz_payment_problem': 'Төлем мәселесі',
-        'kz_where_ticket': 'Менің билетім қайда?',
-        'kz_change_date': 'Күнін өзгерту',
-        'kz_luggage': 'Багаж',
-        'kz_pets': 'Жануарлар',
         'payment_problem': 'Проблема с оплатой',
         'where_ticket': 'Где мой билет?',
         'thank_you': 'Спасибо!',
@@ -409,7 +357,10 @@ const Translations = {
         'buy_btn': 'Сатып алу',
         'seats_label': 'Орындар',
         'pass_short': 'жолаушы',
+        'bronze_level': 'Қола деңгей',
         'silver_level': 'Күміс деңгей',
+        'gold_level': 'Алтын деңгей',
+        'platinum_level': 'Платина деңгей',
         'card_payment': 'Банк картасы',
         'cash_payment': 'Қолма-қол ақша',
         'route_label': 'Бағыт',
@@ -426,7 +377,6 @@ const Translations = {
         'status_completed': 'Аяқталған',
         'verified_badge': 'Расталған',
         'all_carriers': 'Барлық тасымалдаушылар',
-        'platinum_level': 'Платина',
         'bonus_accrual': 'Сапар үшін бонустар есептеу',
         'trips_to_gold': 'Алтын деңгейге дейін сапар',
         'operator_online': 'Оператор онлайн',
@@ -611,6 +561,9 @@ const Translations = {
         'fill_required_fields': 'Барлық міндетті өрістерді толтырыңыз',
         'no_results': 'Ештеңе табылмады',
         'show_more': 'Тағы көрсету',
+        'empty': 'бос',
+        'profile_updated': 'Профиль жаңартылды',
+        'avatar_updated': 'Аватар жаңартылды',
         
         // Месяца
         'january': 'Қаңтар',
@@ -626,70 +579,21 @@ const Translations = {
         'november': 'Қараша',
         'december': 'Желтоқсан',
         
-        // Отзывы (образцы)
-        'letter_a': 'А',
-        'alexey_petrov': 'Алексей Петров',
-        'verified_status': 'Расталған',
-        'date_01032026': '01.03.2026',
-        'rating_5stars': '★★★★★',
-        'company_busline': 'BusLine',
-        'review_title_excellent': 'Тамаша сервис',
-        'review_text_excellent': 'Сапар өте ұнады! Автобус таза, кондиционер жақсы жұмыс істеді, жүргізуші сыпайы. Кесте бойынша дәл келдік. Міндетті түрде тағы пайдаланамын!',
-        'pros_clean': 'Таза, ыңғайлы, сыпайы жүргізуші',
-        'cons_none': 'Таппадым',
-        'letter_o': 'О',
-        'olga_kozlova': 'Ольга Козлова',
-        'date_28022026': '28.02.2026',
-        'company_skyway': 'SkyWay',
-        'review_title_wonderful': 'Керемет сапар',
-        'review_text_wonderful': 'Өте ризамын! Автобус жаңа, орындықтар өте ыңғайлы, розеткалар, wi-fi бар. Жүргізуші кәсіпқой. Жол уақыты байқалмай өтті.',
-        'pros_new_bus': 'Жаңа автобус, розеткалар, wi-fi',
-        'cons_none_alt': 'Жоқ',
-        'letter_e': 'Е',
-        'elena_smirnova': 'Елена Смирнова',
-        'date_26022026': '26.02.2026',
-        'rating_4stars': '★★★★☆',
-        'company_ecobus': 'EcoBus',
-        'review_title_good': 'Жақсы, бірақ...',
-        'review_text_good': 'Жалпы сапар жақсы өтті. Автобус ыңғайлы, wi-fi бар, бірақ үзіліспен жұмыс істеді. Қалғаны өте жақсы.',
-        'pros_comfortable': 'Ыңғайлы орындықтар, таза',
-        'cons_wifi': 'Wi-Fi нашар жұмыс істеді',
-        'letter_s': 'С',
-        'sergey_morozov': 'Сергей Морозов',
-        'date_24022026': '24.02.2026',
-        'company_transvip': 'TransVIP',
-        'review_title_vip': 'VIP-деңгей',
-        'review_text_vip': 'Сапар жоғары деңгейде! Өте ыңғайлы автобус, орындар аз, кеңістік көп. Тамақтандырды, су берді. Бағасы ақталған.',
-        'pros_comfort_service': 'Жайлылық, сервис, тамақ',
-        'cons_price': 'Бағасы жоғары',
-        'letter_d': 'Д',
-        'dmitry_ivanov': 'Дмитрий Иванов',
-        'date_21022026': '21.02.2026',
-        'rating_3stars': '★★★☆☆',
-        'company_express': 'Express',
-        'review_title_average': 'Орташа',
-        'review_text_average': 'Автобус ескілеу, кондиционер ыстыққа шыдамады. Жүргізуші абайлап жүрді, бірақ 40 минут кешікті.',
-        'pros_price_only': 'Бағасы',
-        'cons_old_bus': 'Ескі автобус, кешігу',
-        
         // Разное
         'time_2144': '21:44',
         'how_to_buy_question': 'Билетті қалай сатып алуға болады?',
         'time_2212': '22:12',
         'how_to_return_question': 'Билетті қалай қайтаруға болады?',
-        'kz_how_to_buy': 'Билетті қалай сатып алуға болады?',
-        'kz_how_to_return': 'Билетті қалай қайтаруға болады?',
-        'kz_bonus_program': 'Бонустық бағдарлама',
-        'kz_payment_problem': 'Төлем мәселесі',
-        'kz_where_ticket': 'Менің билетім қайда?',
-        'kz_change_date': 'Күнін өзгерту',
-        'kz_luggage': 'Багаж',
-        'kz_pets': 'Жануарлар',
         'payment_problem': 'Төлем мәселесі',
         'where_ticket': 'Менің билетім қайда?',
         'thank_you': 'Рахмет!',
         'goodbye': 'Сау болыңыз!',
-        'thank_you_choice': 'GloBus таңдағаныңыз үшін рахмет! Жақсы сапар!'
+        'thank_you_choice': 'GloBus таңдағаныңыз үшін рахмет! Жақсы сапар!',
+        'help': 'Көмек',
+        'discount': 'Жеңілдік',
+        'time': 'Уақыт',
+        'cancelled': 'Бас тарту',
+        'complaint': 'Шағым'
     },
     
     en: {
@@ -751,7 +655,10 @@ const Translations = {
         'buy_btn': 'Buy',
         'seats_label': 'Seats',
         'pass_short': 'pass',
+        'bronze_level': 'Bronze level',
         'silver_level': 'Silver level',
+        'gold_level': 'Gold level',
+        'platinum_level': 'Platinum level',
         'card_payment': 'Bank card',
         'cash_payment': 'Cash to driver',
         'route_label': 'Route',
@@ -768,7 +675,6 @@ const Translations = {
         'status_completed': 'Completed',
         'verified_badge': 'Verified',
         'all_carriers': 'All carriers',
-        'platinum_level': 'Platinum',
         'bonus_accrual': 'Bonus accrual for the trip',
         'trips_to_gold': 'trips to Gold level',
         'operator_online': 'Operator online',
@@ -953,6 +859,9 @@ const Translations = {
         'fill_required_fields': 'Fill all required fields',
         'no_results': 'No results found',
         'show_more': 'Show more',
+        'empty': 'empty',
+        'profile_updated': 'Profile updated',
+        'avatar_updated': 'Avatar updated',
         
         // Months
         'january': 'January',
@@ -968,70 +877,21 @@ const Translations = {
         'november': 'November',
         'december': 'December',
         
-        // Reviews (samples)
-        'letter_a': 'A',
-        'alexey_petrov': 'Alexey Petrov',
-        'verified_status': 'Verified',
-        'date_01032026': '03/01/2026',
-        'rating_5stars': '★★★★★',
-        'company_busline': 'BusLine',
-        'review_title_excellent': 'Excellent service',
-        'review_text_excellent': 'I really enjoyed the trip! The bus is clean, the air conditioning worked great, the driver is polite. Arrived exactly on schedule. I will definitely use it again!',
-        'pros_clean': 'Clean, comfortable, polite driver',
-        'cons_none': 'None found',
-        'letter_o': 'O',
-        'olga_kozlova': 'Olga Kozlova',
-        'date_28022026': '02/28/2026',
-        'company_skyway': 'SkyWay',
-        'review_title_wonderful': 'Wonderful trip',
-        'review_text_wonderful': 'Very satisfied! The bus is new, very comfortable seats, there are sockets, wi-fi. The driver is a professional. The travel time flew by unnoticed.',
-        'pros_new_bus': 'New bus, sockets, wi-fi',
-        'cons_none_alt': 'None',
-        'letter_e': 'E',
-        'elena_smirnova': 'Elena Smirnova',
-        'date_26022026': '02/26/2026',
-        'rating_4stars': '★★★★☆',
-        'company_ecobus': 'EcoBus',
-        'review_title_good': 'Good, but...',
-        'review_text_good': 'Overall the trip went well. The bus is comfortable, there is wi-fi, but it worked intermittently. Otherwise everything is fine.',
-        'pros_comfortable': 'Comfortable seats, clean',
-        'cons_wifi': 'Wi-Fi worked poorly',
-        'letter_s': 'S',
-        'sergey_morozov': 'Sergey Morozov',
-        'date_24022026': '02/24/2026',
-        'company_transvip': 'TransVIP',
-        'review_title_vip': 'VIP level',
-        'review_text_vip': 'Trip at the highest level! Very comfortable bus, few seats, lots of space. They fed us, gave us water. The price is justified.',
-        'pros_comfort_service': 'Comfort, service, food',
-        'cons_price': 'Price is high',
-        'letter_d': 'D',
-        'dmitry_ivanov': 'Dmitry Ivanov',
-        'date_21022026': '02/21/2026',
-        'rating_3stars': '★★★☆☆',
-        'company_express': 'Express',
-        'review_title_average': 'Average',
-        'review_text_average': 'The bus is old, the air conditioning could not cope with the heat. The driver drove carefully, but we were 40 minutes late.',
-        'pros_price_only': 'Price',
-        'cons_old_bus': 'Old bus, delay',
-        
         // Miscellaneous
         'time_2144': '9:44 PM',
         'how_to_buy_question': 'How to buy a ticket?',
         'time_2212': '10:12 PM',
         'how_to_return_question': 'How to return a ticket?',
-        'kz_how_to_buy': 'How to buy a ticket? (Kazakh)',
-        'kz_how_to_return': 'How to return a ticket? (Kazakh)',
-        'kz_bonus_program': 'Bonus program (Kazakh)',
-        'kz_payment_problem': 'Payment problem (Kazakh)',
-        'kz_where_ticket': 'Where is my ticket? (Kazakh)',
-        'kz_change_date': 'Change date (Kazakh)',
-        'kz_luggage': 'Luggage (Kazakh)',
-        'kz_pets': 'Pets (Kazakh)',
         'payment_problem': 'Payment problem',
         'where_ticket': 'Where is my ticket?',
         'thank_you': 'Thank you!',
         'goodbye': 'Goodbye!',
-        'thank_you_choice': 'Thank you for choosing GloBus! Have a nice trip!'
+        'thank_you_choice': 'Thank you for choosing GloBus! Have a nice trip!',
+        'help': 'Help',
+        'discount': 'Discount',
+        'time': 'Time',
+        'cancelled': 'Cancelled',
+        'complaint': 'Complaint'
     }
 };
 
@@ -1040,11 +900,13 @@ const LanguageManager = {
     currentLang: localStorage.getItem('busgo_language') || 'ru',
     
     init() {
+        console.log('LanguageManager init with lang:', this.currentLang);
         this.loadLanguage(this.currentLang);
         this.setupLanguageSelector();
     },
     
     loadLanguage(lang) {
+        console.log('Loading language:', lang);
         this.currentLang = lang;
         localStorage.setItem('busgo_language', lang);
         
@@ -1078,7 +940,10 @@ const LanguageManager = {
         
         // Перевести динамический контент
         this.translateDynamicContent();
-        
+
+        if (document.getElementById('reviews-page').classList.contains('active-page')) {
+            ReviewManager.renderReviews();
+        }    
         // Обновить плейсхолдеры
         this.translatePlaceholders();
     },
@@ -1239,13 +1104,13 @@ const LanguageManager = {
         const authSubmitBtn = document.getElementById('authSubmitBtn');
         if (authSubmitBtn) {
             const isLogin = document.getElementById('loginTab')?.classList.contains('active');
-            authSubmitBtn.innerHTML = `<span data-i18n="${isLogin ? 'login' : 'register'}">${Translations[this.currentLang][isLogin ? 'login' : 'register']}</span>`;
+            authSubmitBtn.innerHTML = `<span>${Translations[this.currentLang][isLogin ? 'login' : 'register']}</span>`;
         }
         
         const loginTab = document.getElementById('loginTab');
         const registerTab = document.getElementById('registerTab');
-        if (loginTab) loginTab.innerHTML = `<span data-i18n="login">${Translations[this.currentLang]['login']}</span>`;
-        if (registerTab) registerTab.innerHTML = `<span data-i18n="register">${Translations[this.currentLang]['register']}</span>`;
+        if (loginTab) loginTab.innerHTML = `<span>${Translations[this.currentLang]['login']}</span>`;
+        if (registerTab) registerTab.innerHTML = `<span>${Translations[this.currentLang]['register']}</span>`;
         
         // Модальное окно покупки
         const purchaseTitle = document.querySelector('#purchaseModal .modal-header h2');
@@ -1278,24 +1143,24 @@ const LanguageManager = {
         
         const greatBtn = document.querySelector('#successModal .btn-primary');
         if (greatBtn) {
-            greatBtn.innerHTML = `<span data-i18n="great">${Translations[this.currentLang]['great']}</span>`;
+            greatBtn.innerHTML = `<span>${Translations[this.currentLang]['great']}</span>`;
         }
     },
     
     translateFilters() {
         const filterToggle = document.getElementById('filterToggle');
         if (filterToggle) {
-            filterToggle.innerHTML = `<i class="fas fa-sliders-h"></i> <span data-i18n="filters">${Translations[this.currentLang]['filters']}</span>`;
+            filterToggle.innerHTML = `<i class="fas fa-sliders-h"></i> <span>${Translations[this.currentLang]['filters']}</span>`;
         }
         
         const applyFilters = document.getElementById('applyFilters');
         if (applyFilters) {
-            applyFilters.innerHTML = `<span data-i18n="apply">${Translations[this.currentLang]['apply']}</span>`;
+            applyFilters.innerHTML = `<span>${Translations[this.currentLang]['apply']}</span>`;
         }
         
         const resetFilters = document.getElementById('resetFilters');
         if (resetFilters) {
-            resetFilters.innerHTML = `<span data-i18n="reset">${Translations[this.currentLang]['reset']}</span>`;
+            resetFilters.innerHTML = `<span>${Translations[this.currentLang]['reset']}</span>`;
         }
         
         const filterLabels = document.querySelectorAll('.filter-group label');
@@ -1365,12 +1230,12 @@ const LanguageManager = {
         
         const addReviewBtn = document.getElementById('addReviewBtn');
         if (addReviewBtn) {
-            addReviewBtn.innerHTML = `<i class="fas fa-plus"></i> <span data-i18n="writeReview">${Translations[this.currentLang]['writeReview']}</span>`;
+            addReviewBtn.innerHTML = `<i class="fas fa-plus"></i> <span>${Translations[this.currentLang]['writeReview']}</span>`;
         }
         
         const loadMoreBtn = document.getElementById('loadMoreReviews');
         if (loadMoreBtn) {
-            loadMoreBtn.innerHTML = `<span data-i18n="loadMore">${Translations[this.currentLang]['loadMore']}</span>`;
+            loadMoreBtn.innerHTML = `<span>${Translations[this.currentLang]['loadMore']}</span>`;
         }
     },
     
@@ -1384,7 +1249,7 @@ const LanguageManager = {
             const small = card.querySelector('small');
             
             if (h3) h3.textContent = Translations[this.currentLang][level];
-            if (p) p.innerHTML = `${level === 'platinum' ? '5%' : (index + 1) + '%'} <span data-i18n="cashback">${Translations[this.currentLang]['cashback']}</span>`;
+            if (p) p.innerHTML = `${level === 'platinum' ? '5%' : (index + 1) + '%'} <span>${Translations[this.currentLang]['cashback']}</span>`;
             
             const ranges = ['bronzeRange', 'silverRange', 'goldRange', 'platinumRange'];
             if (small) small.textContent = Translations[this.currentLang][ranges[index]];
@@ -1392,7 +1257,7 @@ const LanguageManager = {
         
         const yourBonus = document.querySelector('.bonus-card h3');
         if (yourBonus) {
-            yourBonus.innerHTML = `<i class="fas fa-coins"></i> <span data-i18n="yourBonus">${Translations[this.currentLang]['yourBonus']}</span>`;
+            yourBonus.innerHTML = `<i class="fas fa-coins"></i> <span>${Translations[this.currentLang]['yourBonus']}</span>`;
         }
         
         const bonusInfo = document.querySelector('.bonus-card p');
@@ -1437,6 +1302,14 @@ const LanguageManager = {
         });
     },
     
+    translateReviews() {
+        const reviewCards = document.querySelectorAll('.review-card');
+        if (reviewCards.length > 0) {
+            // Если отзывы уже отображаются, перерисовываем их
+            ReviewManager.renderReviews();
+        }
+    },
+
     translateTripCards() {
         const tripCards = document.querySelectorAll('.trip-card');
         tripCards.forEach(card => {
@@ -1445,12 +1318,17 @@ const LanguageManager = {
                 buyBtn.textContent = AppState.auth.isAuthenticated ? 
                     Translations[this.currentLang]['buy_btn'] : 
                     Translations[this.currentLang]['login_prompt'];
+                
+                // Обновляем disabled атрибут
+                buyBtn.disabled = !AppState.auth.isAuthenticated;
             }
             
             const small = card.querySelector('small');
-            if (small && small.textContent.includes('мест')) {
+            if (small) {
                 const seats = small.textContent.replace(/[^0-9]/g, '');
-                small.textContent = `${seats} ${Translations[this.currentLang]['seats_short']}`;
+                if (seats) {
+                    small.textContent = `${seats} ${Translations[this.currentLang]['seats_short']}`;
+                }
             }
         });
     },
@@ -1546,7 +1424,7 @@ const AppState = {
         messages: JSON.parse(localStorage.getItem('chat_messages')) || [
             {
                 id: 'msg1',
-                text: LanguageManager.translate('welcome_message'),
+                text: Translations.ru['welcome_message'],
                 sender: 'support',
                 time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
             }
@@ -1582,29 +1460,6 @@ const AMENITIES = [
     { id: 'charger', name: 'Зарядка', icon: 'fa-battery-three-quarters' }
 ];
 
-// Ответы поддержки с переводами
-const SUPPORT_RESPONSES = {
-    'Как купить билет?': (lang) => Translations[lang]['how_to_buy_answer'],
-    'Как вернуть билет?': (lang) => Translations[lang]['how_to_return_answer'],
-    'Бонусная программа': (lang) => Translations[lang]['bonusProgramAnswer'],
-    'Проблема с оплатой': (lang) => Translations[lang]['payment_problem'],
-    'Где мой билет?': (lang) => Translations[lang]['where_ticket'],
-    'Смена даты': (lang) => Translations[lang]['change_date'],
-    'Багаж': (lang) => Translations[lang]['luggage'],
-    'Животные': (lang) => Translations[lang]['pets'],
-    'привет': (lang) => Translations[lang]['welcome_message'],
-    'здравствуйте': (lang) => Translations[lang]['welcome_message'],
-    'спасибо': (lang) => Translations[lang]['thank_you'],
-    'пока': (lang) => Translations[lang]['goodbye'],
-    'помощь': (lang) => Translations[lang]['help'],
-    'опоздание': (lang) => Translations[lang]['lateAnswer'],
-    'скидка': (lang) => Translations[lang]['discount'],
-    'дети': (lang) => Translations[lang]['children'],
-    'время': (lang) => Translations[lang]['time'],
-    'отмена': (lang) => Translations[lang]['cancelled'],
-    'жалоба': (lang) => Translations[lang]['complaint']
-};
-
 // ==================== ХРАНИЛИЩЕ ====================
 const Storage = {
     save(key, data) {
@@ -1612,6 +1467,7 @@ const Storage = {
             localStorage.setItem(key, JSON.stringify(data));
             return true;
         } catch (e) {
+            console.error('Ошибка сохранения в localStorage:', e);
             return false;
         }
     },
@@ -1620,7 +1476,8 @@ const Storage = {
         try {
             const data = localStorage.getItem(key);
             return data ? JSON.parse(data) : defaultValue;
-        } catch {
+        } catch (e) {
+            console.error('Ошибка загрузки из localStorage:', e);
             return defaultValue;
         }
     },
@@ -1629,21 +1486,25 @@ const Storage = {
         const users = this.load('busgo_users', {});
         users[user.email] = user;
         this.save('busgo_users', users);
+        console.log('Пользователь сохранен:', user.email);
     },
     
     getUser(email) {
         const users = this.load('busgo_users', {});
+        console.log('Поиск пользователя:', email, 'Найден:', users[email] ? 'да' : 'нет');
         return users[email] || null;
     },
     
     saveSession(user) {
         this.save('currentUser', user);
         this.save('sessionToken', 'token_' + Date.now());
+        console.log('Сессия сохранена для:', user.email);
     },
     
     clearSession() {
         this.remove('currentUser');
         this.remove('sessionToken');
+        console.log('Сессия очищена');
     },
     
     remove(key) {
@@ -1753,9 +1614,10 @@ const BonusManager = {
         const history = this.getUserBonusHistory(user.email);
         const container = document.getElementById('bonusHistory');
         const profileHistoryContainer = document.getElementById('bonusHistoryList');
+        const lang = LanguageManager.currentLang;
         
         if (history.length === 0) {
-            const emptyHtml = `<p class="empty-state">${LanguageManager.translate('bonus_history')} ${LanguageManager.translate('empty') || 'пуст'}</p>`;
+            const emptyHtml = `<p class="empty-state">${Translations[lang]['bonus_history']} ${Translations[lang]['empty']}</p>`;
             if (container) container.innerHTML = emptyHtml;
             if (profileHistoryContainer) profileHistoryContainer.innerHTML = emptyHtml;
             return;
@@ -1946,6 +1808,7 @@ const ReviewManager = {
             : '4.5';
         
         const companiesCount = new Set(reviews.map(r => r.company)).size;
+        const lang = LanguageManager.currentLang;
         
         const avgRatingEl = document.getElementById('avgRating');
         const avgStarsEl = document.getElementById('avgStars');
@@ -1964,11 +1827,12 @@ const ReviewManager = {
     },
     
     updateCompanyFilters() {
+        const lang = LanguageManager.currentLang;
         const companyFilter = document.getElementById('reviewCompanyFilter');
         const reviewCompany = document.getElementById('reviewCompany');
         
         if (companyFilter) {
-            const options = [`<option value="all">${LanguageManager.translate('all_companies') || LanguageManager.translate('allCompanies')}</option>`];
+            const options = [`<option value="all">${Translations[lang]['allCompanies']}</option>`];
             COMPANIES.forEach(c => {
                 options.push(`<option value="${c.id}">${c.name}</option>`);
             });
@@ -1976,7 +1840,7 @@ const ReviewManager = {
         }
         
         if (reviewCompany) {
-            const options = [`<option value="">${LanguageManager.translate('selectCompany')}</option>`];
+            const options = [`<option value="">${Translations[lang]['selectCompany']}</option>`];
             COMPANIES.forEach(c => {
                 options.push(`<option value="${c.id}">${c.name}</option>`);
             });
@@ -2019,6 +1883,7 @@ const ReviewManager = {
         
         const filteredReviews = this.getFilteredReviews();
         const totalReviews = filteredReviews.length;
+        const lang = LanguageManager.currentLang;
         
         if (!loadMore) {
             AppState.ui.reviewsPage = 1;
@@ -2029,7 +1894,7 @@ const ReviewManager = {
         const paginatedReviews = filteredReviews.slice(start, end);
         
         if (paginatedReviews.length === 0) {
-            container.innerHTML = `<p class="empty-state">${LanguageManager.translate('no_results')}</p>`;
+            container.innerHTML = `<p class="empty-state">${Translations[lang]['no_results']}</p>`;
         } else {
             container.innerHTML = paginatedReviews.map(review => this.renderReviewCard(review)).join('');
         }
@@ -2043,6 +1908,7 @@ const ReviewManager = {
     renderReviewCard(review) {
         const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
         const date = new Date(review.date).toLocaleDateString();
+        const lang = LanguageManager.currentLang;
         
         return `
             <div class="review-card">
@@ -2055,7 +1921,7 @@ const ReviewManager = {
                         </div>
                         <div>
                             <strong>${review.user}</strong>
-                            ${review.verified ? `<span class="verified-badge"><i class="fas fa-check-circle"></i> ${LanguageManager.translate('verified_badge')}</span>` : ''}
+                            ${review.verified ? `<span class="verified-badge"><i class="fas fa-check-circle"></i> ${Translations[lang]['verified_badge']}</span>` : ''}
                         </div>
                     </div>
                     <span class="review-date">${date}</span>
@@ -2089,8 +1955,10 @@ const ReviewManager = {
     
     openReviewModal() {
         const user = AppState.auth.currentUser;
+        const lang = LanguageManager.currentLang;
+        
         if (!user) {
-            UIManager.showNotification(LanguageManager.translate('login_prompt'), 'warning');
+            UIManager.showNotification(Translations[lang]['login_to_see'], 'warning');
             UIManager.showModal('authModal');
             return;
         }
@@ -2101,9 +1969,9 @@ const ReviewManager = {
         const tripSelect = document.getElementById('reviewTrip');
         if (tripSelect) {
             if (completedTickets.length === 0) {
-                tripSelect.innerHTML = `<option value="">${LanguageManager.translate('no_results')}</option>`;
+                tripSelect.innerHTML = `<option value="">${Translations[lang]['no_past_trips']}</option>`;
             } else {
-                let options = `<option value="">${LanguageManager.translate('selectTrip')}</option>`;
+                let options = `<option value="">${Translations[lang]['selectTrip']}</option>`;
                 completedTickets.forEach(ticket => {
                     options += `<option value="${ticket.id}">${ticket.from.name} → ${ticket.to.name} (${ticket.departureDate})</option>`;
                 });
@@ -2144,7 +2012,7 @@ const ReviewManager = {
             user.email,
             'plus',
             50,
-            LanguageManager.translate('bonus_for_review')
+            Translations[LanguageManager.currentLang]['bonus_for_review']
         );
         
         return true;
@@ -2154,6 +2022,11 @@ const ReviewManager = {
 // ==================== ПОДДЕРЖКА ====================
 const SupportManager = {
     init() {
+        // Обновляем приветственное сообщение на текущем языке
+        const lang = LanguageManager.currentLang;
+        if (AppState.support.messages[0]) {
+            AppState.support.messages[0].text = Translations[lang]['welcome_message'];
+        }
         this.renderMessages();
         this.setupSuggestionChips();
     },
@@ -2208,35 +2081,66 @@ const SupportManager = {
         const lowerMsg = message.toLowerCase();
         const lang = LanguageManager.currentLang;
         
-        for (const [question, answer] of Object.entries(SUPPORT_RESPONSES)) {
-            if (lowerMsg.includes(question.toLowerCase())) {
-                return typeof answer === 'function' ? answer(lang) : answer;
-            }
-        }
+        // Словарь ответов на разных языках
+        const responseMap = {
+            'билет': Translations[lang]['how_to_buy_answer'],
+            'купить': Translations[lang]['how_to_buy_answer'],
+            'ticket': Translations[lang]['how_to_buy_answer'],
+            'buy': Translations[lang]['how_to_buy_answer'],
+            'возврат': Translations[lang]['how_to_return_answer'],
+            'вернуть': Translations[lang]['how_to_return_answer'],
+            'return': Translations[lang]['how_to_return_answer'],
+            'бонус': Translations[lang]['bonusProgramAnswer'],
+            'кэшбэк': Translations[lang]['bonusProgramAnswer'],
+            'балл': Translations[lang]['bonusProgramAnswer'],
+            'bonus': Translations[lang]['bonusProgramAnswer'],
+            'проблем': Translations[lang]['payment_problem'],
+            'ошибк': Translations[lang]['payment_problem'],
+            'payment': Translations[lang]['payment_problem'],
+            'где': Translations[lang]['where_ticket'],
+            'найти': Translations[lang]['where_ticket'],
+            'where': Translations[lang]['where_ticket'],
+            'find': Translations[lang]['where_ticket'],
+            'дата': Translations[lang]['changeDateAnswer'],
+            'перенести': Translations[lang]['changeDateAnswer'],
+            'изменить': Translations[lang]['changeDateAnswer'],
+            'date': Translations[lang]['changeDateAnswer'],
+            'change': Translations[lang]['changeDateAnswer'],
+            'багаж': Translations[lang]['luggage'],
+            'luggage': Translations[lang]['luggage'],
+            'живот': Translations[lang]['petsAnswer'],
+            'собак': Translations[lang]['petsAnswer'],
+            'кошк': Translations[lang]['petsAnswer'],
+            'pet': Translations[lang]['petsAnswer'],
+            'dog': Translations[lang]['petsAnswer'],
+            'cat': Translations[lang]['petsAnswer'],
+            'привет': Translations[lang]['welcome_message'],
+            'здравствуйте': Translations[lang]['welcome_message'],
+            'hello': Translations[lang]['welcome_message'],
+            'спасибо': Translations[lang]['thank_you'],
+            'thank': Translations[lang]['thank_you'],
+            'пока': Translations[lang]['goodbye'],
+            'bye': Translations[lang]['goodbye'],
+            'помощь': Translations[lang]['help'],
+            'help': Translations[lang]['help'],
+            'опоздание': Translations[lang]['lateAnswer'],
+            'late': Translations[lang]['lateAnswer'],
+            'скидка': Translations[lang]['discount'],
+            'discount': Translations[lang]['discount'],
+            'дети': Translations[lang]['children'],
+            'children': Translations[lang]['children'],
+            'время': Translations[lang]['time'],
+            'time': Translations[lang]['time'],
+            'отмена': Translations[lang]['cancelled'],
+            'cancel': Translations[lang]['cancelled'],
+            'жалоба': Translations[lang]['complaint'],
+            'complaint': Translations[lang]['complaint']
+        };
         
-        if (lowerMsg.includes('билет') || lowerMsg.includes('купить') || lowerMsg.includes('ticket') || lowerMsg.includes('buy')) {
-            return Translations[lang]['how_to_buy_answer'];
-        }
-        if (lowerMsg.includes('возврат') || lowerMsg.includes('вернуть') || lowerMsg.includes('return')) {
-            return Translations[lang]['how_to_return_answer'];
-        }
-        if (lowerMsg.includes('бонус') || lowerMsg.includes('кэшбэк') || lowerMsg.includes('балл') || lowerMsg.includes('bonus')) {
-            return Translations[lang]['bonusProgramAnswer'];
-        }
-        if (lowerMsg.includes('проблем') || lowerMsg.includes('ошибк') || lowerMsg.includes('не проходит') || lowerMsg.includes('problem') || lowerMsg.includes('error')) {
-            return Translations[lang]['payment_problem'];
-        }
-        if (lowerMsg.includes('где') || lowerMsg.includes('найти') || lowerMsg.includes('where') || lowerMsg.includes('find')) {
-            return Translations[lang]['where_ticket'];
-        }
-        if (lowerMsg.includes('дата') || lowerMsg.includes('перенести') || lowerMsg.includes('изменить') || lowerMsg.includes('date') || lowerMsg.includes('change')) {
-            return Translations[lang]['change_date'];
-        }
-        if (lowerMsg.includes('багаж') || lowerMsg.includes('luggage')) {
-            return Translations[lang]['luggage'];
-        }
-        if (lowerMsg.includes('живот') || lowerMsg.includes('собак') || lowerMsg.includes('кошк') || lowerMsg.includes('pet') || lowerMsg.includes('dog') || lowerMsg.includes('cat')) {
-            return Translations[lang]['pets'];
+        for (const [key, value] of Object.entries(responseMap)) {
+            if (lowerMsg.includes(key)) {
+                return value;
+            }
         }
         
         return Translations[lang]['unknown_question'];
@@ -2246,16 +2150,41 @@ const SupportManager = {
         document.querySelectorAll('.suggestion-chip').forEach(chip => {
             chip.addEventListener('click', () => {
                 const question = chip.dataset.question;
-                this.sendMessage(question);
+                // Переводим вопрос на текущий язык перед отправкой
+                const lang = LanguageManager.currentLang;
+                let translatedQuestion = question;
+                
+                if (lang === 'kz') {
+                    if (question === 'Как купить билет?') translatedQuestion = Translations.kz['how_to_buy_question'];
+                    else if (question === 'Как вернуть билет?') translatedQuestion = Translations.kz['how_to_return_question'];
+                    else if (question === 'Бонусная программа') translatedQuestion = Translations.kz['bonusProgramQuestion'];
+                    else if (question === 'Проблема с оплатой') translatedQuestion = Translations.kz['payment_problem'];
+                    else if (question === 'Где мой билет?') translatedQuestion = Translations.kz['where_ticket'];
+                    else if (question === 'Смена даты') translatedQuestion = Translations.kz['changeDate'];
+                    else if (question === 'Багаж') translatedQuestion = Translations.kz['luggage'];
+                    else if (question === 'Животные') translatedQuestion = Translations.kz['pets'];
+                } else if (lang === 'en') {
+                    if (question === 'Как купить билет?') translatedQuestion = Translations.en['how_to_buy_question'];
+                    else if (question === 'Как вернуть билет?') translatedQuestion = Translations.en['how_to_return_question'];
+                    else if (question === 'Бонусная программа') translatedQuestion = Translations.en['bonusProgramQuestion'];
+                    else if (question === 'Проблема с оплатой') translatedQuestion = Translations.en['payment_problem'];
+                    else if (question === 'Где мой билет?') translatedQuestion = Translations.en['where_ticket'];
+                    else if (question === 'Смена даты') translatedQuestion = Translations.en['changeDate'];
+                    else if (question === 'Багаж') translatedQuestion = Translations.en['luggage'];
+                    else if (question === 'Животные') translatedQuestion = Translations.en['pets'];
+                }
+                
+                this.sendMessage(translatedQuestion);
             });
         });
     },
     
     clearChat() {
+        const lang = LanguageManager.currentLang;
         AppState.support.messages = [
             {
                 id: 'msg1',
-                text: LanguageManager.translate('welcome_message'),
+                text: Translations[lang]['welcome_message'],
                 sender: 'support',
                 time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
             }
@@ -2268,10 +2197,14 @@ const SupportManager = {
 // ==================== АУТЕНТИФИКАЦИЯ ====================
 const Auth = {
     init() {
+        console.log('Auth init started');
         const user = Storage.load('currentUser');
         const token = Storage.load('sessionToken');
         if (user && token) {
+            console.log('User found in storage', user);
             this.setUser(user);
+        } else {
+            console.log('No user in storage');
         }
     },
     
@@ -2285,12 +2218,25 @@ const Auth = {
         
         Tickets.renderUserTickets();
         BonusManager.renderBonusHistory();
+        
+        // Немедленно обновляем все кнопки покупки
+        document.querySelectorAll('.buy-btn').forEach(btn => {
+            btn.disabled = false;
+            btn.textContent = Translations[LanguageManager.currentLang]['buy_btn'] || 'Купить';
+        });
+        
+        // Перерисовываем список рейсов для обновления кнопок
+        Render.renderTrips();
+        
+        console.log('User set:', user.email);
     },
     
     login(email, password) {
+        console.log('Login attempt:', email);
         const user = Storage.getUser(email);
         
         if (user && user.password === password) {
+            console.log('Login successful');
             const userData = {
                 name: user.name,
                 email: user.email,
@@ -2304,20 +2250,23 @@ const Auth = {
             
             this.setUser(userData);
             Storage.saveSession(userData);
-            UIManager.showNotification(LanguageManager.translate('welcome') + ', ' + user.name + '!', 'success');
+            UIManager.showNotification(Translations[LanguageManager.currentLang]['welcome'] + ' ' + user.name + '!', 'success');
             
             return { success: true };
         }
         
-        UIManager.showNotification(LanguageManager.translate('login_error'), 'error');
+        console.log('Login failed');
+        UIManager.showNotification(Translations[LanguageManager.currentLang]['login_error'], 'error');
         return { success: false };
     },
     
     register(userData) {
+        console.log('Register attempt:', userData);
         const { name, email, password, phone } = userData;
         
         if (Storage.getUser(email)) {
-            UIManager.showNotification(LanguageManager.translate('user_exists'), 'error');
+            console.log('User already exists');
+            UIManager.showNotification(Translations[LanguageManager.currentLang]['user_exists'], 'error');
             return { success: false };
         }
         
@@ -2325,7 +2274,7 @@ const Auth = {
             name,
             email,
             password,
-            phone,
+            phone: phone || '',
             registered: new Date().toISOString(),
             trips: 0,
             bonus: 500,
@@ -2335,7 +2284,7 @@ const Auth = {
                     id: 'bonus_welcome',
                     type: 'plus',
                     amount: 500,
-                    description: LanguageManager.translate('welcome_bonus'),
+                    description: Translations[LanguageManager.currentLang]['welcome_bonus'],
                     date: new Date().toISOString(),
                     balance: 500
                 }
@@ -2343,11 +2292,12 @@ const Auth = {
         };
         
         Storage.saveUser(newUser);
+        console.log('User registered:', email);
         
         const userDataForSession = {
             name,
             email,
-            phone,
+            phone: phone || '',
             bonus: 500,
             trips: 0,
             level: 'bronze',
@@ -2357,7 +2307,7 @@ const Auth = {
         
         this.setUser(userDataForSession);
         Storage.saveSession(userDataForSession);
-        UIManager.showNotification(LanguageManager.translate('register_success'), 'success');
+        UIManager.showNotification(Translations[LanguageManager.currentLang]['register_success'], 'success');
         
         return { success: true };
     },
@@ -2367,9 +2317,22 @@ const Auth = {
         AppState.auth.currentUser = null;
         Storage.clearSession();
         this.updateUI();
-        UIManager.showNotification(LanguageManager.translate('logout_message'), 'info');
+        UIManager.showNotification(Translations[LanguageManager.currentLang]['logout_message'], 'info');
         Tickets.renderUserTickets();
         BonusManager.renderBonusHistory();
+        
+        // Обновляем кнопки покупки
+        document.querySelectorAll('.buy-btn').forEach(btn => {
+            btn.disabled = true;
+            btn.textContent = Translations[LanguageManager.currentLang]['login_prompt'] || 'Войти';
+        });
+        
+        // Принудительно обновляем страницу после выхода для сброса всех состояний
+        setTimeout(() => {
+            window.location.reload();
+        }, 1500);
+        
+        console.log('User logged out');
     },
     
     calculateLevel(trips) {
@@ -2384,6 +2347,7 @@ const Auth = {
         const auth = document.getElementById('userAuth');
         const logoutItem = document.getElementById('burgerLogoutItem');
         const headerUserName = document.getElementById('headerUserName');
+        const lang = LanguageManager.currentLang;
         
         if (AppState.auth.isAuthenticated && AppState.auth.currentUser) {
             if (notAuth) notAuth.style.display = 'none';
@@ -2403,7 +2367,7 @@ const Auth = {
             if (notAuth) notAuth.style.display = 'flex';
             if (auth) auth.style.display = 'none';
             if (logoutItem) logoutItem.style.display = 'none';
-            if (headerUserName) headerUserName.textContent = LanguageManager.translate('login_prompt');
+            if (headerUserName) headerUserName.textContent = Translations[lang]['login'];
         }
     },
     
@@ -2411,6 +2375,7 @@ const Auth = {
         if (!AppState.auth.currentUser) return;
         
         const user = AppState.auth.currentUser;
+        const lang = LanguageManager.currentLang;
         
         const profileEmail = document.getElementById('profileEmail');
         const profilePhone = document.getElementById('profilePhone');
@@ -2429,12 +2394,12 @@ const Auth = {
         if (profilePhoneInput) profilePhoneInput.value = user.phone || '';
         
         const levelNames = { 
-            bronze: LanguageManager.translate('bronze'), 
-            silver: LanguageManager.translate('silver'), 
-            gold: LanguageManager.translate('gold'), 
-            platinum: LanguageManager.translate('platinum') 
+            bronze: Translations[lang]['bronze_level'] || 'Бронзовый', 
+            silver: Translations[lang]['silver_level'] || 'Серебряный', 
+            gold: Translations[lang]['gold_level'] || 'Золотой', 
+            platinum: Translations[lang]['platinum_level'] || 'Платиновый' 
         };
-        if (profileLevel) profileLevel.textContent = levelNames[user.level] + ' ' + LanguageManager.translate('level');
+        if (profileLevel) profileLevel.textContent = levelNames[user.level];
         if (profileBonus) profileBonus.textContent = user.bonus || 0;
         if (profileTrips) profileTrips.textContent = user.trips || 0;
         if (bonusAmount) bonusAmount.textContent = (user.bonus || 0) + ' ₸';
@@ -2486,6 +2451,7 @@ const Auth = {
         const user = AppState.auth.currentUser;
         if (!user) return;
         
+        const lang = LanguageManager.currentLang;
         const trips = user.trips || 0;
         let progress = 0;
         let pointsToNext = 0;
@@ -2494,19 +2460,19 @@ const Auth = {
         if (trips < 5) {
             progress = (trips / 5) * 100;
             pointsToNext = 5 - trips;
-            nextLevel = LanguageManager.translate('silver');
+            nextLevel = Translations[lang]['silver_level'] || 'Серебряный';
         } else if (trips < 20) {
             progress = ((trips - 5) / 15) * 100;
             pointsToNext = 20 - trips;
-            nextLevel = LanguageManager.translate('gold');
+            nextLevel = Translations[lang]['gold_level'] || 'Золотой';
         } else if (trips < 50) {
             progress = ((trips - 20) / 30) * 100;
             pointsToNext = 50 - trips;
-            nextLevel = LanguageManager.translate('platinum');
+            nextLevel = Translations[lang]['platinum_level'] || 'Платиновый';
         } else {
             progress = 100;
             pointsToNext = 0;
-            nextLevel = LanguageManager.translate('max_level');
+            nextLevel = Translations[lang]['max_level'] || 'максимальный';
         }
         
         const profileProgress = document.getElementById('profileProgress');
@@ -2517,8 +2483,8 @@ const Auth = {
         if (profilePoints) profilePoints.textContent = pointsToNext;
         if (bonusNextLevel) {
             bonusNextLevel.textContent = pointsToNext > 0 ? 
-                `${pointsToNext} ${LanguageManager.translate('trips_to_next')} ${nextLevel}` : 
-                LanguageManager.translate('max_level_reached');
+                `${pointsToNext} ${Translations[lang]['trips_to_next']} ${nextLevel}` : 
+                Translations[lang]['max_level_reached'];
         }
     },
     
@@ -2538,7 +2504,7 @@ const Auth = {
             }
             
             Storage.saveSession(user);
-            UIManager.showNotification(LanguageManager.translate('avatar_updated'), 'success');
+            UIManager.showNotification(Translations[LanguageManager.currentLang]['avatar_updated'], 'success');
         };
         reader.readAsDataURL(file);
     }
@@ -2577,10 +2543,13 @@ const UIManager = {
     },
     
     showModal(modalId) {
+        console.log('Showing modal:', modalId);
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.classList.add('show');
             document.body.style.overflow = 'hidden';
+        } else {
+            console.error('Modal not found:', modalId);
         }
     },
     
@@ -2645,8 +2614,8 @@ function generateTripsForRoute(fromCity, toCity, date) {
         
         trips.push({
             id: `trip-${Date.now()}-${i}-${Math.random().toString(36).substr(2, 9)}`,
-            from: fromCity || { name: AppState.search.fromLocation.split(',')[0], country: 'Қазақстан' },
-            to: toCity || { name: AppState.search.toLocation.split(',')[0], country: 'Қазақстан' },
+            from: fromCity || { name: 'Алматы', country: 'Казахстан' },
+            to: toCity || { name: 'Астана', country: 'Казахстан' },
             company: company,
             busType: busType,
             departureTime: departureTime,
@@ -2702,9 +2671,10 @@ const Render = {
         const start = (AppState.ui.currentPageNum - 1) * AppState.ui.itemsPerPage;
         const end = start + AppState.ui.itemsPerPage;
         const paginatedTrips = AppState.data.filteredTrips.slice(start, end);
+        const lang = LanguageManager.currentLang;
         
         if (paginatedTrips.length === 0) {
-            container.innerHTML = `<p style="text-align: center; padding: 2rem;">${LanguageManager.translate('no_results')}</p>`;
+            container.innerHTML = `<p style="text-align: center; padding: 2rem;">${Translations[lang]['no_results']}</p>`;
             this.renderPagination(0);
             return;
         }
@@ -2721,17 +2691,20 @@ const Render = {
     },
     
     renderTripCard(trip) {
+        const lang = LanguageManager.currentLang;
+        const isAuth = AppState.auth.isAuthenticated;
+        
         return `
             <div class="trip-card" data-trip-id="${trip.id}">
                 <div class="trip-info">
                     <div class="trip-time">
                         <div class="departure-time">${trip.departureTime}</div>
                         <div>→ ${trip.arrivalTime}</div>
-                        <small>${trip.duration} ${LanguageManager.translate('hours')}</small>
+                        <small>${trip.duration} ${Translations[lang]['hours']}</small>
                     </div>
                     
                     <div class="trip-route">
-                        <div><strong>${trip.from.name}</strong> → <strong>${trip.to.name}</strong></div>
+                        <div><strong>${trip.from.name || trip.from}</strong> → <strong>${trip.to.name || trip.to}</strong></div>
                         <small>${trip.departureDate}</small>
                     </div>
                     
@@ -2750,10 +2723,10 @@ const Render = {
                 
                 <div class="trip-price-block">
                     <div class="current-price">${trip.price.toLocaleString()} ₸</div>
-                    <small>${trip.availableSeats} ${LanguageManager.translate('seats_short')}</small>
+                    <small>${trip.availableSeats} ${Translations[lang]['seats']}</small>
                     <button class="buy-btn" onclick="openPurchaseModal('${trip.id}')" 
-                            ${!AppState.auth.isAuthenticated ? 'disabled' : ''}>
-                        ${AppState.auth.isAuthenticated ? LanguageManager.translate('buy_btn') : LanguageManager.translate('login_prompt')}
+                            ${!isAuth ? 'disabled' : ''}>
+                        ${isAuth ? Translations[lang]['buy_btn'] : Translations[lang]['login_prompt']}
                     </button>
                 </div>
             </div>
@@ -2820,12 +2793,14 @@ const Render = {
         const container = document.getElementById('popularRoutes');
         if (!container) return;
         
+        const lang = LanguageManager.currentLang;
+        
         container.innerHTML = AppState.data.popularRoutes.map(route => `
             <div class="popular-card" onclick="searchPopularRoute('${route.from}', '${route.to}')">
                 <i class="fas fa-route"></i>
                 <div class="popular-route">${route.from} → ${route.to}</div>
-                <div class="popular-price">${LanguageManager.translate('from')} ${route.price.toLocaleString()} ₸</div>
-                <div class="popular-count">${route.count} ${LanguageManager.translate('trips')}</div>
+                <div class="popular-price">${Translations[lang]['from']} ${route.price.toLocaleString()} ₸</div>
+                <div class="popular-count">${route.count} ${Translations[lang]['trips']}</div>
             </div>
         `).join('');
     }
@@ -2879,8 +2854,10 @@ const MapManager = {
     updateDistance(fromCoords, toCoords) {
         const distance = calculateDistance(fromCoords, toCoords);
         const routeDistance = document.getElementById('routeDistance');
+        const lang = LanguageManager.currentLang;
+        
         if (routeDistance) {
-            routeDistance.innerHTML = `<span data-i18n="distance">${LanguageManager.translate('distance')}</span>: ${Math.round(distance)} км`;
+            routeDistance.innerHTML = `<span>${Translations[lang]['distance']}</span>: ${Math.round(distance)} км`;
         }
     },
     
@@ -3107,7 +3084,7 @@ const Tickets = {
             purchaseDate: new Date().toISOString(),
             status: 'upcoming',
             paymentMethod: AppState.purchase.paymentMethod,
-            qrData: `GloBus:${trip.from.name}-${trip.to.name}-${trip.departureDate}-${trip.departureTime}-${LanguageManager.translate('seats_label')}:${seats.join(',')}`
+            qrData: `GloBus:${trip.from.name}-${trip.to.name}-${trip.departureDate}-${trip.departureTime}-${Translations.ru['seats']}:${seats.join(',')}`
         };
         
         tickets.upcoming.push(ticket);
@@ -3121,7 +3098,7 @@ const Tickets = {
                 user.email,
                 'plus',
                 bonusEarned,
-                `${LanguageManager.translate('bonus_accrual')} ${trip.from.name} → ${trip.to.name}`
+                `${Translations.ru['bonus_accrual']} ${trip.from.name} → ${trip.to.name}`
             );
         }
         
@@ -3139,6 +3116,8 @@ const Tickets = {
     
     renderUserTickets() {
         const user = AppState.auth.currentUser;
+        const lang = LanguageManager.currentLang;
+        
         if (!user) {
             this.showEmptyStates();
             return;
@@ -3152,7 +3131,7 @@ const Tickets = {
                 upcomingContainer.innerHTML = tickets.upcoming.map(ticket => 
                     this.renderTicketCard(ticket, 'upcoming')).join('');
             } else {
-                upcomingContainer.innerHTML = `<p class="empty-state">${LanguageManager.translate('no_upcoming_trips')}</p>`;
+                upcomingContainer.innerHTML = `<p class="empty-state">${Translations[lang]['no_upcoming_trips']}</p>`;
             }
         }
         
@@ -3162,7 +3141,7 @@ const Tickets = {
                 historyContainer.innerHTML = tickets.history.map(ticket => 
                     this.renderTicketCard(ticket, 'history')).join('');
             } else {
-                historyContainer.innerHTML = `<p class="empty-state">${LanguageManager.translate('no_past_trips')}</p>`;
+                historyContainer.innerHTML = `<p class="empty-state">${Translations[lang]['no_past_trips']}</p>`;
             }
         }
         
@@ -3171,8 +3150,9 @@ const Tickets = {
     },
     
     renderTicketCard(ticket, type) {
+        const lang = LanguageManager.currentLang;
         const statusClass = type === 'upcoming' ? 'status-upcoming' : 'status-completed';
-        const statusText = type === 'upcoming' ? LanguageManager.translate('status_upcoming') : LanguageManager.translate('status_completed');
+        const statusText = type === 'upcoming' ? Translations[lang]['status_upcoming'] : Translations[lang]['status_completed'];
         
         return `
             <div class="ticket-item ${type}" data-ticket-id="${ticket.id}">
@@ -3181,8 +3161,8 @@ const Tickets = {
                     <div class="ticket-route">${ticket.company.name} • ${ticket.busType}</div>
                     <div class="ticket-meta">
                         <span><i class="fas fa-clock"></i> ${ticket.departureDate} ${ticket.departureTime}</span>
-                        <span><i class="fas fa-chair"></i> ${LanguageManager.translate('seats_label')}: ${ticket.seats.join(', ')}</span>
-                        <span><i class="fas fa-users"></i> ${ticket.passengers.length} ${LanguageManager.translate('pass_short')}</span>
+                        <span><i class="fas fa-chair"></i> ${Translations[lang]['seats']}: ${ticket.seats.join(', ')}</span>
+                        <span><i class="fas fa-users"></i> ${ticket.passengers.length} ${Translations[lang]['pass_short']}</span>
                     </div>
                 </div>
                 <span class="ticket-status ${statusClass}">${statusText}</span>
@@ -3195,16 +3175,17 @@ const Tickets = {
         if (!timeline) return;
         
         const allTickets = [...(tickets.upcoming || []), ...(tickets.history || [])];
+        const lang = LanguageManager.currentLang;
         
         if (allTickets.length === 0) {
-            timeline.innerHTML = `<p class="empty-state">${LanguageManager.translate('noTrips')}</p>`;
+            timeline.innerHTML = `<p class="empty-state">${Translations[lang]['noTrips']}</p>`;
             return;
         }
         
         allTickets.sort((a, b) => new Date(b.purchaseDate) - new Date(a.purchaseDate));
         
         timeline.innerHTML = allTickets.map(ticket => {
-            const status = ticket.status === 'upcoming' ? LanguageManager.translate('status_upcoming') : LanguageManager.translate('status_completed');
+            const status = ticket.status === 'upcoming' ? Translations[lang]['status_upcoming'] : Translations[lang]['status_completed'];
             const statusClass = ticket.status === 'upcoming' ? 'upcoming' : 'completed';
             
             return `
@@ -3236,7 +3217,7 @@ const Tickets = {
         const totalSpentStat = document.getElementById('totalSpentStat');
         
         if (totalTripsStat) totalTripsStat.textContent = totalTrips;
-        if (totalHoursStat) totalHoursStat.textContent = totalHours + ' ' + LanguageManager.translate('hours');
+        if (totalHoursStat) totalHoursStat.textContent = totalHours + ' ' + Translations[lang]['hours'];
         if (totalSpentStat) totalSpentStat.textContent = totalSpent.toLocaleString() + ' ₸';
         
         this.attachTicketClickHandlers();
@@ -3255,6 +3236,8 @@ const Tickets = {
     
     showTicketDetails(ticketId) {
         const user = AppState.auth.currentUser;
+        const lang = LanguageManager.currentLang;
+        
         if (!user) return;
         
         const tickets = Storage.getUserTickets(user.email);
@@ -3270,8 +3253,8 @@ const Tickets = {
         ticket.passengers.forEach((p, i) => {
             passengersHtml += `
                 <div class="passenger-item">
-                    <strong>${LanguageManager.translate('passenger_label')} ${i + 1}:</strong> ${p.lastName} ${p.firstName} ${p.middleName || ''}<br>
-                    <small>${LanguageManager.translate('document_label')}: ${p.docNumber}</small>
+                    <strong>${Translations[lang]['passenger_label']} ${i + 1}:</strong> ${p.lastName} ${p.firstName} ${p.middleName || ''}<br>
+                    <small>${Translations[lang]['document_label']}: ${p.docNumber}</small>
                 </div>
             `;
         });
@@ -3283,44 +3266,44 @@ const Tickets = {
             
             <div class="ticket-info-grid">
                 <div class="ticket-info-item">
-                    <span class="ticket-info-label">${LanguageManager.translate('route_label')}</span>
+                    <span class="ticket-info-label">${Translations[lang]['route_label']}</span>
                     <span class="ticket-info-value">${ticket.from.name} → ${ticket.to.name}</span>
                 </div>
                 <div class="ticket-info-item">
-                    <span class="ticket-info-label">${LanguageManager.translate('date_label')}</span>
+                    <span class="ticket-info-label">${Translations[lang]['date_label']}</span>
                     <span class="ticket-info-value">${ticket.departureDate}</span>
                 </div>
                 <div class="ticket-info-item">
-                    <span class="ticket-info-label">${LanguageManager.translate('time_label')}</span>
+                    <span class="ticket-info-label">${Translations[lang]['time_label']}</span>
                     <span class="ticket-info-value">${ticket.departureTime}</span>
                 </div>
                 <div class="ticket-info-item">
-                    <span class="ticket-info-label">${LanguageManager.translate('seats_label')}</span>
+                    <span class="ticket-info-label">${Translations[lang]['seats_label']}</span>
                     <span class="ticket-info-value">${ticket.seats.join(', ')}</span>
                 </div>
                 <div class="ticket-info-item">
-                    <span class="ticket-info-label">${LanguageManager.translate('carrier_label')}</span>
+                    <span class="ticket-info-label">${Translations[lang]['carrier_label']}</span>
                     <span class="ticket-info-value">${ticket.company.name}</span>
                 </div>
                 <div class="ticket-info-item">
-                    <span class="ticket-info-label">${LanguageManager.translate('bus_label')}</span>
+                    <span class="ticket-info-label">${Translations[lang]['bus_label']}</span>
                     <span class="ticket-info-value">${ticket.busType}</span>
                 </div>
             </div>
             
-            <h4>${LanguageManager.translate('passengers_label')}</h4>
+            <h4>${Translations[lang]['passengers_label']}</h4>
             <div class="passenger-list">
                 ${passengersHtml}
             </div>
             
             <div class="ticket-info-grid" style="margin-top: 1rem;">
                 <div class="ticket-info-item">
-                    <span class="ticket-info-label">${LanguageManager.translate('cost_label')}</span>
+                    <span class="ticket-info-label">${Translations[lang]['cost_label']}</span>
                     <span class="ticket-info-value">${ticket.price.toLocaleString()} ₸</span>
                 </div>
                 <div class="ticket-info-item">
-                    <span class="ticket-info-label">${LanguageManager.translate('payment_method_label')}</span>
-                    <span class="ticket-info-value">${ticket.paymentMethod === 'card' ? LanguageManager.translate('card_payment') : LanguageManager.translate('cash_payment')}</span>
+                    <span class="ticket-info-label">${Translations[lang]['payment_method_label']}</span>
+                    <span class="ticket-info-value">${ticket.paymentMethod === 'card' ? Translations[lang]['card_payment'] : Translations[lang]['cash_payment']}</span>
                 </div>
             </div>
         `;
@@ -3332,7 +3315,7 @@ const Tickets = {
         const completeBtn = document.getElementById('completeTripBtn');
         if (completeBtn) {
             completeBtn.style.display = isUpcoming ? 'block' : 'none';
-            completeBtn.innerHTML = `<i class="fas fa-check-circle"></i> <span>${LanguageManager.translate('complete')}</span>`;
+            completeBtn.innerHTML = `<i class="fas fa-check-circle"></i> <span>${Translations[lang]['complete']}</span>`;
             completeBtn.onclick = () => this.completeTrip(ticket.id);
         }
         
@@ -3340,7 +3323,7 @@ const Tickets = {
         const pdfBtn = document.getElementById('pdfTicketBtn');
         
         if (printBtn) {
-            printBtn.innerHTML = `<i class="fas fa-print"></i> <span>${LanguageManager.translate('print')}</span>`;
+            printBtn.innerHTML = `<i class="fas fa-print"></i> <span>${Translations[lang]['print']}</span>`;
             printBtn.onclick = () => this.printTicket(ticket);
         }
         if (pdfBtn) {
@@ -3353,6 +3336,8 @@ const Tickets = {
     
     generateQRCode(ticket) {
         const qrContainer = document.getElementById('qrcode');
+        const lang = LanguageManager.currentLang;
+        
         if (!qrContainer) {
             console.error('QR-контейнер не найден');
             return;
@@ -3360,7 +3345,7 @@ const Tickets = {
         
         qrContainer.innerHTML = '';
         
-        const qrData = ticket.qrData || `GloBus\n${LanguageManager.translate('ticket')}: ${ticket.id}\n${LanguageManager.translate('route_label')}: ${ticket.from.name} → ${ticket.to.name}\n${LanguageManager.translate('date_label')}: ${ticket.departureDate}\n${LanguageManager.translate('time_label')}: ${ticket.departureTime}\n${LanguageManager.translate('seats_label')}: ${ticket.seats.join(', ')}`;
+        const qrData = ticket.qrData || `GloBus\n${Translations[lang]['ticket']}: ${ticket.id}\n${Translations[lang]['route_label']}: ${ticket.from.name} → ${ticket.to.name}\n${Translations[lang]['date_label']}: ${ticket.departureDate}\n${Translations[lang]['time_label']}: ${ticket.departureTime}\n${Translations[lang]['seats_label']}: ${ticket.seats.join(', ')}`;
         
         try {
             if (typeof qrcode !== 'undefined') {
@@ -3387,16 +3372,18 @@ const Tickets = {
     },
     
     createFallbackQR(container, data) {
+        const lang = LanguageManager.currentLang;
+        
         container.innerHTML = `
             <div style="text-align: center; padding: 20px; background: #f8fafc; border-radius: 8px; width: 200px;">
                 <p style="margin-bottom: 10px; color: #2563eb; font-weight: 600;">
-                    <i class="fas fa-qrcode"></i> QR-код
+                    <i class="fas fa-qrcode"></i> ${Translations[lang]['boarding_qr']}
                 </p>
                 <div style="background: white; padding: 10px; border: 1px solid #2563eb; border-radius: 8px; font-family: monospace; font-size: 10px; word-break: break-all;">
                     ${data}
                 </div>
                 <p style="margin-top: 10px; color: #64748b; font-size: 11px;">
-                    ${LanguageManager.translate('show_qr_to_driver')}
+                    ${Translations[lang]['show_qr_to_driver']}
                 </p>
             </div>
         `;
@@ -3404,6 +3391,8 @@ const Tickets = {
     
     completeTrip(ticketId) {
         const user = AppState.auth.currentUser;
+        const lang = LanguageManager.currentLang;
+        
         if (!user) return;
         
         const tickets = Storage.getUserTickets(user.email);
@@ -3418,13 +3407,14 @@ const Tickets = {
             Storage.saveUserTickets(user.email, tickets);
             this.renderUserTickets();
             UIManager.closeModal('ticketModal');
-            UIManager.showNotification(LanguageManager.translate('trip_completed'), 'success');
+            UIManager.showNotification(Translations[lang]['trip_completed'], 'success');
         }
     },
     
     printTicket(ticket) {
         let qrImageData = '';
         const qrContainer = document.getElementById('qrcode');
+        const lang = LanguageManager.currentLang;
         
         if (qrContainer) {
             const img = qrContainer.querySelector('img');
@@ -3437,7 +3427,7 @@ const Tickets = {
         printWindow.document.write(`
             <html>
                 <head>
-                    <title>${LanguageManager.translate('ticket')} ${ticket.from.name} → ${ticket.to.name}</title>
+                    <title>${Translations[lang]['ticket']} ${ticket.from.name} → ${ticket.to.name}</title>
                     <style>
                         body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
                         .header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #2563eb; padding-bottom: 20px; }
@@ -3457,60 +3447,60 @@ const Tickets = {
                 <body>
                     <div class="header">
                         <h1>GloBus</h1>
-                        <h2>${LanguageManager.translate('electronic_ticket')}</h2>
+                        <h2>${Translations[lang]['electronic_ticket']}</h2>
                     </div>
                     
                     <div class="info">
                         <div class="info-grid">
                             <div class="info-item">
-                                <span class="info-label">${LanguageManager.translate('route_label')}</span>
+                                <span class="info-label">${Translations[lang]['route_label']}</span>
                                 <span class="info-value">${ticket.from.name} → ${ticket.to.name}</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">${LanguageManager.translate('date_label')}</span>
+                                <span class="info-label">${Translations[lang]['date_label']}</span>
                                 <span class="info-value">${ticket.departureDate}</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">${LanguageManager.translate('time_label')}</span>
+                                <span class="info-label">${Translations[lang]['time_label']}</span>
                                 <span class="info-value">${ticket.departureTime}</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">${LanguageManager.translate('seats_label')}</span>
+                                <span class="info-label">${Translations[lang]['seats_label']}</span>
                                 <span class="info-value">${ticket.seats.join(', ')}</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">${LanguageManager.translate('carrier_label')}</span>
+                                <span class="info-label">${Translations[lang]['carrier_label']}</span>
                                 <span class="info-value">${ticket.company.name}</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">${LanguageManager.translate('bus_label')}</span>
+                                <span class="info-label">${Translations[lang]['bus_label']}</span>
                                 <span class="info-value">${ticket.busType}</span>
                             </div>
                         </div>
                         
-                        <h3>${LanguageManager.translate('passengers_label')}</h3>
+                        <h3>${Translations[lang]['passengers_label']}</h3>
                         <div class="passengers">
                             ${ticket.passengers.map((p, i) => `
                                 <div class="passenger-item">
-                                    <strong>${LanguageManager.translate('passenger_label')} ${i + 1}:</strong> ${p.lastName} ${p.firstName} ${p.middleName || ''}<br>
-                                    <small>${LanguageManager.translate('document_label')}: ${p.docNumber}</small>
+                                    <strong>${Translations[lang]['passenger_label']} ${i + 1}:</strong> ${p.lastName} ${p.firstName} ${p.middleName || ''}<br>
+                                    <small>${Translations[lang]['document_label']}: ${p.docNumber}</small>
                                 </div>
                             `).join('')}
                         </div>
                         
                         <div class="info-item" style="margin-top: 20px;">
-                            <span class="info-label">${LanguageManager.translate('cost_label')}</span>
+                            <span class="info-label">${Translations[lang]['cost_label']}</span>
                             <span class="info-value" style="font-size: 20px; color: #059669;">${ticket.price.toLocaleString()} ₸</span>
                         </div>
                     </div>
                     
                     <div class="qr">
-                        <p>${LanguageManager.translate('boarding_qr')}:</p>
-                        ${qrImageData ? `<img src="${qrImageData}" style="width: 200px; height: 200px;">` : '<p>QR-код не доступен</p>'}
+                        <p>${Translations[lang]['boarding_qr']}:</p>
+                        ${qrImageData ? `<img src="${qrImageData}" style="width: 200px; height: 200px;">` : `<p>${Translations[lang]['boarding_qr']} ${Translations[lang]['no_results']}</p>`}
                     </div>
                     
                     <div class="footer">
-                        <p>${LanguageManager.translate('thank_you_choice')}</p>
+                        <p>${Translations[lang]['thank_you_choice']}</p>
                         <p>${new Date().toLocaleDateString()}</p>
                     </div>
                 </body>
@@ -3521,17 +3511,18 @@ const Tickets = {
     },
     
     downloadPDF(ticket) {
-        UIManager.showNotification(LanguageManager.translate('pdf_saved'), 'success');
+        UIManager.showNotification(Translations[LanguageManager.currentLang]['pdf_saved'], 'success');
     },
     
     showEmptyStates() {
+        const lang = LanguageManager.currentLang;
         const upcomingContainer = document.getElementById('upcomingTickets');
         const historyContainer = document.getElementById('historyTickets');
         const timelineContainer = document.getElementById('tripsTimeline');
         
-        if (upcomingContainer) upcomingContainer.innerHTML = `<p class="empty-state">${LanguageManager.translate('login_to_see')}</p>`;
-        if (historyContainer) historyContainer.innerHTML = `<p class="empty-state">${LanguageManager.translate('login_to_see')}</p>`;
-        if (timelineContainer) timelineContainer.innerHTML = `<p class="empty-state">${LanguageManager.translate('login_to_see')}</p>`;
+        if (upcomingContainer) upcomingContainer.innerHTML = `<p class="empty-state">${Translations[lang]['login_to_see']}</p>`;
+        if (historyContainer) historyContainer.innerHTML = `<p class="empty-state">${Translations[lang]['login_to_see']}</p>`;
+        if (timelineContainer) timelineContainer.innerHTML = `<p class="empty-state">${Translations[lang]['login_to_see']}</p>`;
     }
 };
 
@@ -3564,10 +3555,12 @@ function openPurchaseModal(tripId) {
 }
 
 function updatePurchaseStep() {
+    const lang = LanguageManager.currentLang;
+    
     document.querySelectorAll('.progress-step').forEach((step, index) => {
         step.classList.toggle('active', index + 1 === AppState.purchase.currentStep);
         const stepKey = `step${index + 1}`;
-        step.textContent = LanguageManager.translate(stepKey);
+        step.textContent = Translations[lang][stepKey] || step.textContent;
     });
     
     document.querySelectorAll('.purchase-step').forEach(step => {
@@ -3596,25 +3589,27 @@ function updatePurchaseStep() {
     const prevBtn = document.getElementById('prevStep');
     if (prevBtn) {
         prevBtn.style.display = AppState.purchase.currentStep > 1 ? 'block' : 'none';
-        prevBtn.innerHTML = `<i class="fas fa-chevron-left"></i> <span>${LanguageManager.translate('back')}</span>`;
+        prevBtn.innerHTML = `<i class="fas fa-chevron-left"></i> <span>${Translations[lang]['back'] || 'Назад'}</span>`;
     }
     
     const nextBtn = document.getElementById('nextStep');
     if (nextBtn) {
         nextBtn.innerHTML = AppState.purchase.currentStep === AppState.purchase.totalSteps ? 
-            `<span>${LanguageManager.translate('confirm_booking')}</span>` : 
-            `<span>${LanguageManager.translate('next')}</span> <i class="fas fa-chevron-right"></i>`;
+            `<span>${Translations[lang]['confirm_booking'] || 'Подтвердить бронирование'}</span>` : 
+            `<span>${Translations[lang]['next'] || 'Далее'}</span> <i class="fas fa-chevron-right"></i>`;
     }
     
     const stepTitles = document.querySelectorAll('.purchase-step h3');
-    if (stepTitles[0]) stepTitles[0].innerHTML = `<i class="fas fa-chair"></i> <span>${LanguageManager.translate('selectSeats')}</span>`;
-    if (stepTitles[1]) stepTitles[1].innerHTML = `<i class="fas fa-users"></i> <span>${LanguageManager.translate('passengerData')}</span>`;
-    if (stepTitles[2]) stepTitles[2].innerHTML = `<i class="fas fa-credit-card"></i> <span>${LanguageManager.translate('payment')}</span>`;
-    if (stepTitles[3]) stepTitles[3].innerHTML = `<i class="fas fa-check-circle"></i> <span>${LanguageManager.translate('confirmation')}</span>`;
+    if (stepTitles[0]) stepTitles[0].innerHTML = `<i class="fas fa-chair"></i> <span>${Translations[lang]['selectSeats'] || 'Выберите места'}</span>`;
+    if (stepTitles[1]) stepTitles[1].innerHTML = `<i class="fas fa-users"></i> <span>${Translations[lang]['passengerData'] || 'Данные пассажиров'}</span>`;
+    if (stepTitles[2]) stepTitles[2].innerHTML = `<i class="fas fa-credit-card"></i> <span>${Translations[lang]['payment'] || 'Оплата'}</span>`;
+    if (stepTitles[3]) stepTitles[3].innerHTML = `<i class="fas fa-check-circle"></i> <span>${Translations[lang]['confirmation'] || 'Подтверждение'}</span>`;
 }
 
 function updateSelectedSum() {
     const trip = AppState.purchase.currentTrip;
+    const lang = LanguageManager.currentLang;
+    
     if (!trip) return;
     
     const count = AppState.purchase.selectedSeats.length;
@@ -3628,13 +3623,15 @@ function updateSelectedSum() {
     
     const selectedInfo = document.querySelector('.selected-info');
     if (selectedInfo) {
-        selectedInfo.innerHTML = `<span>${LanguageManager.translate('selectedSeats')}</span>: <span id="selectedCount">${count}</span> • <span>${LanguageManager.translate('totalAmount')}</span>: <span id="selectedSum">${sum.toLocaleString()}</span> ₸`;
+        selectedInfo.innerHTML = `<span>${Translations[lang]['selectedSeats'] || 'Выбрано мест'}</span>: <span id="selectedCount">${count}</span> • <span>${Translations[lang]['totalAmount'] || 'Сумма'}</span>: <span id="selectedSum">${sum.toLocaleString()}</span> ₸`;
     }
 }
 
 function renderBusScheme() {
     const container = document.getElementById('busScheme');
     const trip = AppState.purchase.currentTrip;
+    const lang = LanguageManager.currentLang;
+    
     if (!container || !trip) return;
     
     const rows = Math.ceil(trip.totalSeats / 4);
@@ -3658,7 +3655,7 @@ function renderBusScheme() {
             else if (isOccupied) seatClass = 'seat occupied';
             else if (isVip) seatClass = 'seat vip';
             
-            html += `<div class="${seatClass}" onclick="toggleSeat(${seatNumber})" title="${LanguageManager.translate('seat')} ${seatNumber}">${seatNumber}</div>`;
+            html += `<div class="${seatClass}" onclick="toggleSeat(${seatNumber})" title="${Translations[lang]['seat']} ${seatNumber}">${seatNumber}</div>`;
         }
         
         html += '</div></div>';
@@ -3667,18 +3664,20 @@ function renderBusScheme() {
     container.innerHTML = html;
     
     const legendItems = document.querySelectorAll('.seat-legend .legend-item span:last-child');
-    if (legendItems[0]) legendItems[0].textContent = LanguageManager.translate('free');
-    if (legendItems[1]) legendItems[1].textContent = LanguageManager.translate('selected');
-    if (legendItems[2]) legendItems[2].textContent = LanguageManager.translate('occupied');
+    if (legendItems[0]) legendItems[0].textContent = Translations[lang]['free'] || 'Свободно';
+    if (legendItems[1]) legendItems[1].textContent = Translations[lang]['selected'] || 'Выбрано';
+    if (legendItems[2]) legendItems[2].textContent = Translations[lang]['occupied'] || 'Занято';
 }
 
 function toggleSeat(seatNumber) {
     const index = AppState.purchase.selectedSeats.indexOf(seatNumber);
+    const lang = LanguageManager.currentLang;
+    
     if (index === -1) {
         if (AppState.purchase.selectedSeats.length < 8) {
             AppState.purchase.selectedSeats.push(seatNumber);
         } else {
-            UIManager.showNotification(LanguageManager.translate('max_seats'), 'warning');
+            UIManager.showNotification(Translations[lang]['max_seats'] || 'Можно выбрать не более 8 мест', 'warning');
         }
     } else {
         AppState.purchase.selectedSeats.splice(index, 1);
@@ -3690,6 +3689,8 @@ function toggleSeat(seatNumber) {
 
 function renderPassengerForm() {
     const container = document.getElementById('passengerForm');
+    const lang = LanguageManager.currentLang;
+    
     if (!container) return;
     
     const passengers = AppState.purchase.passengers;
@@ -3711,38 +3712,38 @@ function renderPassengerForm() {
     passengers.forEach((passenger, index) => {
         html += `
             <div class="passenger-card">
-                <h4>${LanguageManager.translate('passenger_label')} ${index + 1} — ${LanguageManager.translate('seat')} ${seats[index]}</h4>
+                <h4>${Translations[lang]['passenger_label'] || 'Пассажир'} ${index + 1} — ${Translations[lang]['seat'] || 'Место'} ${seats[index]}</h4>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>${LanguageManager.translate('last_name')} *</label>
-                        <input type="text" class="form-input passenger-field" data-field="lastName" data-index="${index}" value="${passenger.lastName || ''}" placeholder="${LanguageManager.translate('last_name')}">
+                        <label>${Translations[lang]['last_name'] || 'Фамилия'} *</label>
+                        <input type="text" class="form-input passenger-field" data-field="lastName" data-index="${index}" value="${passenger.lastName || ''}" placeholder="${Translations[lang]['last_name'] || 'Фамилия'}">
                     </div>
                     <div class="form-group">
-                        <label>${LanguageManager.translate('first_name')} *</label>
-                        <input type="text" class="form-input passenger-field" data-field="firstName" data-index="${index}" value="${passenger.firstName || ''}" placeholder="${LanguageManager.translate('first_name')}">
+                        <label>${Translations[lang]['first_name'] || 'Имя'} *</label>
+                        <input type="text" class="form-input passenger-field" data-field="firstName" data-index="${index}" value="${passenger.firstName || ''}" placeholder="${Translations[lang]['first_name'] || 'Имя'}">
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>${LanguageManager.translate('middle_name')}</label>
-                        <input type="text" class="form-input passenger-field" data-field="middleName" data-index="${index}" value="${passenger.middleName || ''}" placeholder="${LanguageManager.translate('middle_name')}">
+                        <label>${Translations[lang]['middle_name'] || 'Отчество'}</label>
+                        <input type="text" class="form-input passenger-field" data-field="middleName" data-index="${index}" value="${passenger.middleName || ''}" placeholder="${Translations[lang]['middle_name'] || 'Отчество'}">
                     </div>
                     <div class="form-group">
-                        <label>${LanguageManager.translate('birth_date')} *</label>
+                        <label>${Translations[lang]['birth_date'] || 'Дата рождения'} *</label>
                         <input type="date" class="form-input passenger-field" data-field="birthday" data-index="${index}" value="${passenger.birthday || ''}">
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>${LanguageManager.translate('document_number')} *</label>
-                        <input type="text" class="form-input passenger-field" data-field="docNumber" data-index="${index}" value="${passenger.docNumber || ''}" placeholder="${LanguageManager.translate('document_number')}">
+                        <label>${Translations[lang]['document_number'] || 'Номер документа'} *</label>
+                        <input type="text" class="form-input passenger-field" data-field="docNumber" data-index="${index}" value="${passenger.docNumber || ''}" placeholder="${Translations[lang]['document_number'] || 'Номер документа'}">
                     </div>
                     <div class="form-group">
-                        <label>${LanguageManager.translate('phone')}</label>
-                        <input type="tel" class="form-input passenger-field" data-field="phone" data-index="${index}" value="${passenger.phone || ''}" placeholder="${LanguageManager.translate('phone')}">
+                        <label>${Translations[lang]['phone'] || 'Телефон'}</label>
+                        <input type="tel" class="form-input passenger-field" data-field="phone" data-index="${index}" value="${passenger.phone || ''}" placeholder="${Translations[lang]['phone'] || 'Телефон'}">
                     </div>
                 </div>
             </div>
@@ -3764,6 +3765,7 @@ function renderPaymentStep() {
     const trip = AppState.purchase.currentTrip;
     const seatsCount = AppState.purchase.selectedSeats.length;
     const basePrice = trip.price * seatsCount;
+    const lang = LanguageManager.currentLang;
     
     const paymentTicketPrice = document.getElementById('paymentTicketPrice');
     const paymentTotal = document.getElementById('paymentTotal');
@@ -3775,13 +3777,13 @@ function renderPaymentStep() {
     const cashInfo = document.getElementById('cashInfo');
     
     const useBonusesLabel = document.querySelector('label[for="useBonuses"]');
-    if (useBonusesLabel) useBonusesLabel.textContent = LanguageManager.translate('useBonuses');
+    if (useBonusesLabel) useBonusesLabel.textContent = Translations[lang]['useBonuses'] || 'Использовать бонусы';
     
     const cardPaymentLabel = document.querySelector('label[for="paymentCard"]');
-    if (cardPaymentLabel) cardPaymentLabel.innerHTML = `<i class="fas fa-credit-card"></i> ${LanguageManager.translate('card_payment')}`;
+    if (cardPaymentLabel) cardPaymentLabel.innerHTML = `<i class="fas fa-credit-card"></i> ${Translations[lang]['card_payment'] || 'Банковская карта'}`;
     
     const cashPaymentLabel = document.querySelector('label[for="paymentCash"]');
-    if (cashPaymentLabel) cashPaymentLabel.innerHTML = `<i class="fas fa-money-bill-wave"></i> ${LanguageManager.translate('cash_payment')}`;
+    if (cashPaymentLabel) cashPaymentLabel.innerHTML = `<i class="fas fa-money-bill-wave"></i> ${Translations[lang]['cash_payment'] || 'Наличные водителю'}`;
     
     if (paymentTicketPrice) paymentTicketPrice.textContent = basePrice.toLocaleString() + ' ₸';
     if (paymentTotal) paymentTotal.textContent = basePrice.toLocaleString() + ' ₸';
@@ -3863,12 +3865,14 @@ function updatePaymentTotal() {
 }
 
 function setupCardInputs() {
+    const lang = LanguageManager.currentLang;
     const cardNumber = document.getElementById('cardNumber');
     const cardExpiry = document.getElementById('cardExpiry');
     const cardCvv = document.getElementById('cardCvv');
+    const cashInfo = document.getElementById('cashInfo');
     
     if (cardNumber) {
-        cardNumber.placeholder = LanguageManager.translate('cardNumber');
+        cardNumber.placeholder = Translations[lang]['cardNumber'] || 'Номер карты';
         cardNumber.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 16) value = value.slice(0, 16);
@@ -3881,7 +3885,7 @@ function setupCardInputs() {
     }
     
     if (cardExpiry) {
-        cardExpiry.placeholder = LanguageManager.translate('expiry');
+        cardExpiry.placeholder = Translations[lang]['expiry'] || 'Срок';
         cardExpiry.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 4) value = value.slice(0, 4);
@@ -3900,7 +3904,7 @@ function setupCardInputs() {
     }
     
     if (cashInfo) {
-        cashInfo.innerHTML = `<i class="fas fa-info-circle"></i> ${LanguageManager.translate('cashInfo')}`;
+        cashInfo.innerHTML = `<i class="fas fa-info-circle"></i> ${Translations[lang]['cashInfo'] || 'При оплате наличными бонусы не начисляются'}`;
     }
 }
 
@@ -3912,6 +3916,7 @@ function renderConfirmationStep() {
     const finalPrice = AppState.purchase.paymentMethod === 'card' 
         ? basePrice - AppState.purchase.bonusAmount 
         : basePrice;
+    const lang = LanguageManager.currentLang;
     
     const confirmRoute = document.getElementById('confirmRoute');
     const confirmDateTime = document.getElementById('confirmDateTime');
@@ -3930,8 +3935,8 @@ function renderConfirmationStep() {
     if (confirmPassengers) confirmPassengers.textContent = passengers.length;
     if (confirmPaymentMethod) {
         confirmPaymentMethod.textContent = AppState.purchase.paymentMethod === 'card' 
-            ? LanguageManager.translate('card_payment') 
-            : LanguageManager.translate('cash_payment');
+            ? (Translations[lang]['card_payment'] || 'Банковская карта')
+            : (Translations[lang]['cash_payment'] || 'Наличные водителю');
     }
     if (confirmTotal) confirmTotal.textContent = finalPrice.toLocaleString() + ' ₸';
     
@@ -3956,7 +3961,7 @@ function renderConfirmationStep() {
     
     const agreeTermsLabel = document.querySelector('label[for="agreeTerms"]');
     if (agreeTermsLabel) {
-        agreeTermsLabel.textContent = LanguageManager.translate('agreeTerms');
+        agreeTermsLabel.textContent = Translations[lang]['agreeTerms'] || 'Я согласен с условиями покупки';
     }
 }
 
@@ -3977,6 +3982,8 @@ function selectPaymentMethod(method) {
 
 // ==================== ИНИЦИАЛИЗАЦИЯ ====================
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded');
+    
     AppState.data.cities = CITIES;
     AppState.data.companies = COMPANIES;
     
@@ -4011,6 +4018,138 @@ document.addEventListener('DOMContentLoaded', () => {
         sortSelect.addEventListener('change', () => {
             AppState.ui.currentPageNum = 1;
             Render.renderTrips();
+        });
+    }
+    
+    // Убедимся, что модальное окно скрыто при загрузке
+    const authModal = document.getElementById('authModal');
+    if (authModal) {
+        authModal.classList.remove('show');
+    }
+    
+    // Добавляем прямые обработчики для вкладок авторизации
+    const loginTab = document.getElementById('loginTab');
+    const registerTab = document.getElementById('registerTab');
+    const registerFields = document.getElementById('registerFields');
+    const regConfirmField = document.getElementById('regConfirmField');
+    const authSubmitBtn = document.getElementById('authSubmitBtn');
+    const authModalTitle = document.getElementById('authModalTitle');
+    
+    if (loginTab && registerTab) {
+        loginTab.addEventListener('click', function() {
+            console.log('Login tab clicked');
+            loginTab.classList.add('active');
+            registerTab.classList.remove('active');
+            if (registerFields) registerFields.style.display = 'none';
+            if (regConfirmField) regConfirmField.style.display = 'none';
+            if (authSubmitBtn) authSubmitBtn.innerHTML = `<span>${Translations[LanguageManager.currentLang]['login']}</span>`;
+            if (authModalTitle) authModalTitle.textContent = Translations[LanguageManager.currentLang]['login'];
+        });
+        
+        registerTab.addEventListener('click', function() {
+            console.log('Register tab clicked');
+            registerTab.classList.add('active');
+            loginTab.classList.remove('active');
+            if (registerFields) registerFields.style.display = 'block';
+            if (regConfirmField) regConfirmField.style.display = 'block';
+            if (authSubmitBtn) authSubmitBtn.innerHTML = `<span>${Translations[LanguageManager.currentLang]['register']}</span>`;
+            if (authModalTitle) authModalTitle.textContent = Translations[LanguageManager.currentLang]['register'];
+        });
+    }
+    
+    // Добавляем обработчик для формы авторизации
+    const authForm = document.getElementById('authForm');
+    if (authForm) {
+        authForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Auth form submitted');
+            
+            const email = document.getElementById('authEmail');
+            const password = document.getElementById('authPassword');
+            
+            if (!email || !password) {
+                console.log('Email or password field not found');
+                return;
+            }
+            
+            const emailValue = email.value;
+            const passwordValue = password.value;
+            
+            console.log('Email:', emailValue);
+            console.log('Password:', passwordValue);
+            
+            const loginTab = document.getElementById('loginTab');
+            const isLogin = loginTab ? loginTab.classList.contains('active') : true;
+            
+            if (isLogin) {
+                console.log('Login attempt');
+                Auth.login(emailValue, passwordValue);
+                if (AppState.auth.isAuthenticated) {
+                    UIManager.closeModal('authModal');
+                }
+            } else {
+                console.log('Register attempt');
+                const regName = document.getElementById('regName');
+                const regPhone = document.getElementById('regPhone');
+                const regConfirm = document.getElementById('regConfirm');
+                
+                if (!regName || !regPhone || !regConfirm) {
+                    console.log('Registration fields not found');
+                    return;
+                }
+                
+                const name = regName.value;
+                const phone = regPhone.value;
+                const confirm = regConfirm.value;
+                
+                if (!name || !phone || !emailValue || !passwordValue || !confirm) {
+                    UIManager.showNotification(Translations[LanguageManager.currentLang]['fill_required_fields'], 'error');
+                    return;
+                }
+                
+                if (passwordValue !== confirm) {
+                    UIManager.showNotification(Translations[LanguageManager.currentLang]['password_mismatch'], 'error');
+                    return;
+                }
+                
+                const result = Auth.register({ name, email: emailValue, password: passwordValue, phone });
+                if (result.success) {
+                    UIManager.closeModal('authModal');
+                }
+            }
+        });
+    }
+    
+    // Добавляем обработчик для кнопки "Войти" в бургер-меню
+    const burgerLoginBtn = document.getElementById('burgerLoginBtn');
+    if (burgerLoginBtn) {
+        burgerLoginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Burger login button clicked');
+            closeBurger();
+            UIManager.showModal('authModal');
+        });
+    }
+    
+    // Добавляем обработчик для кнопки пользователя в шапке
+    const userMenuBtn = document.getElementById('userMenuBtn');
+    if (userMenuBtn) {
+        userMenuBtn.addEventListener('click', function() {
+            console.log('User menu button clicked');
+            if (!AppState.auth.isAuthenticated) {
+                UIManager.showModal('authModal');
+            } else {
+                // Переход в профиль
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+                const profilePage = document.getElementById('profile-page');
+                if (profilePage) profilePage.classList.add('active-page');
+                
+                document.querySelectorAll('.burger-nav-link').forEach(l => l.classList.remove('active'));
+                const profileLink = document.querySelector('[data-page="profile"]');
+                if (profileLink) profileLink.classList.add('active');
+                
+                Auth.updateProfileUI();
+            }
         });
     }
 });
@@ -4119,8 +4258,13 @@ function attachEventListeners() {
             if (infantsCount) infantsCount.textContent = AppState.search.passengers.infants;
             
             const total = AppState.search.passengers.adults + AppState.search.passengers.children + AppState.search.passengers.infants;
-            const passengerWord = total === 1 ? LanguageManager.translate('passenger') : 
-                                 (total <= 4 ? LanguageManager.translate('passengers_few') : LanguageManager.translate('passengers_many'));
+            const lang = LanguageManager.currentLang;
+            let passengerWord = '';
+            
+            if (total === 1) passengerWord = Translations[lang]['passenger'];
+            else if (total <= 4) passengerWord = Translations[lang]['passengers_few'];
+            else passengerWord = Translations[lang]['passengers_many'];
+            
             if (passengerBtn) {
                 passengerBtn.innerHTML = `<span id="passengerCount">${total}</span> ${passengerWord}`;
             }
@@ -4187,77 +4331,6 @@ function attachEventListeners() {
         });
     }
     
-    const burgerLoginBtn = document.getElementById('burgerLoginBtn');
-    if (burgerLoginBtn) {
-        burgerLoginBtn.addEventListener('click', () => {
-            closeBurger();
-            UIManager.showModal('authModal');
-        });
-    }
-    
-    const userMenuBtn = document.getElementById('userMenuBtn');
-    if (userMenuBtn) {
-        userMenuBtn.addEventListener('click', () => {
-            if (!AppState.auth.isAuthenticated) {
-                UIManager.showModal('authModal');
-            } else {
-                document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
-                const profilePage = document.getElementById('profile-page');
-                if (profilePage) profilePage.classList.add('active-page');
-                
-                document.querySelectorAll('.burger-nav-link').forEach(l => l.classList.remove('active'));
-                const profileLink = document.querySelector('[data-page="profile"]');
-                if (profileLink) profileLink.classList.add('active');
-                
-                Auth.updateProfileUI();
-            }
-        });
-    }
-    
-    const authForm = document.getElementById('authForm');
-    if (authForm) {
-        authForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const email = document.getElementById('authEmail');
-            const password = document.getElementById('authPassword');
-            
-            if (!email || !password) return;
-            
-            const emailValue = email.value;
-            const passwordValue = password.value;
-            const loginTab = document.getElementById('loginTab');
-            const isLogin = loginTab ? loginTab.classList.contains('active') : true;
-            
-            if (isLogin) {
-                Auth.login(emailValue, passwordValue);
-                if (AppState.auth.isAuthenticated) {
-                    UIManager.closeModal('authModal');
-                }
-            } else {
-                const regName = document.getElementById('regName');
-                const regPhone = document.getElementById('regPhone');
-                const regConfirm = document.getElementById('regConfirm');
-                
-                if (!regName || !regPhone || !regConfirm) return;
-                
-                const name = regName.value;
-                const phone = regPhone.value;
-                const confirm = regConfirm.value;
-                
-                if (passwordValue !== confirm) {
-                    UIManager.showNotification(LanguageManager.translate('password_mismatch'), 'error');
-                    return;
-                }
-                
-                const result = Auth.register({ name, email: emailValue, password: passwordValue, phone });
-                if (result.success) {
-                    UIManager.closeModal('authModal');
-                }
-            }
-        });
-    }
-    
     const burgerLogout = document.getElementById('burgerLogout');
     if (burgerLogout) {
         burgerLogout.addEventListener('click', (e) => {
@@ -4319,7 +4392,7 @@ function attachEventListeners() {
                 
                 Storage.saveSession(AppState.auth.currentUser);
                 Auth.updateUI();
-                UIManager.showNotification(LanguageManager.translate('profile_updated'), 'success');
+                UIManager.showNotification(Translations[LanguageManager.currentLang]['profile_updated'], 'success');
             }
         });
     }
@@ -4356,7 +4429,7 @@ function attachEventListeners() {
             if (AppState.purchase.currentStep === AppState.purchase.totalSteps) {
                 const agreeTerms = document.getElementById('agreeTerms');
                 if (!agreeTerms || !agreeTerms.checked) {
-                    UIManager.showNotification(LanguageManager.translate('agree_terms_required'), 'error');
+                    UIManager.showNotification(Translations[LanguageManager.currentLang]['agree_terms_required'], 'error');
                     return;
                 }
                 
@@ -4372,7 +4445,7 @@ function attachEventListeners() {
                             AppState.auth.currentUser.email,
                             'minus',
                             AppState.purchase.bonusAmount,
-                            `${LanguageManager.translate('bonus_spent_for_ticket')} ${ticket.from.name} → ${ticket.to.name}`
+                            `${Translations[LanguageManager.currentLang]['bonus_spent_for_ticket']} ${ticket.from.name} → ${ticket.to.name}`
                         );
                     }
                     
@@ -4392,7 +4465,7 @@ function attachEventListeners() {
                 }
             } else {
                 if (AppState.purchase.currentStep === 1 && AppState.purchase.selectedSeats.length === 0) {
-                    UIManager.showNotification(LanguageManager.translate('select_seats_error'), 'error');
+                    UIManager.showNotification(Translations[LanguageManager.currentLang]['select_seats_error'], 'error');
                     return;
                 }
                 
@@ -4400,7 +4473,7 @@ function attachEventListeners() {
                     for (let i = 0; i < AppState.purchase.passengers.length; i++) {
                         const p = AppState.purchase.passengers[i];
                         if (!p.lastName || !p.firstName || !p.birthday || !p.docNumber) {
-                            UIManager.showNotification(`${LanguageManager.translate('fill_passenger_data')} ${i + 1}`, 'error');
+                            UIManager.showNotification(`${Translations[LanguageManager.currentLang]['fill_passenger_data']} ${i + 1}`, 'error');
                             return;
                         }
                     }
@@ -4499,7 +4572,7 @@ function attachEventListeners() {
             const cons = document.getElementById('reviewCons').value;
             
             if (!tripId || !company || rating === '0' || !title || !text) {
-                UIManager.showNotification(LanguageManager.translate('fill_required_fields'), 'error');
+                UIManager.showNotification(Translations[LanguageManager.currentLang]['fill_required_fields'], 'error');
                 return;
             }
             
@@ -4515,7 +4588,7 @@ function attachEventListeners() {
             
             if (success) {
                 UIManager.closeModal('reviewModal');
-                UIManager.showNotification(LanguageManager.translate('review_published'), 'success');
+                UIManager.showNotification(Translations[LanguageManager.currentLang]['review_published'], 'success');
                 reviewForm.reset();
                 document.getElementById('reviewRating').value = '0';
                 ratingStars.forEach(s => {
@@ -4554,6 +4627,14 @@ function attachEventListeners() {
             item.classList.toggle('active');
         });
     });
+}
+
+function closeBurger() {
+    const burgerMenu = document.getElementById('burgerMenu');
+    const burgerOverlay = document.getElementById('burgerOverlay');
+    if (burgerMenu) burgerMenu.classList.remove('open');
+    if (burgerOverlay) burgerOverlay.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
 function searchPopularRoute(from, to) {
