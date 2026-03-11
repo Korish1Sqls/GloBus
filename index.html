@@ -54,7 +54,7 @@
                         
                         <button class="user-menu-btn" id="userMenuBtn">
                             <i class="fas fa-user-circle"></i>
-                            <span id="headerUserName">Войти</span>
+                            <span id="headerUserName" data-i18n="login">Войти</span>
                         </button>
                     </div>
                 </div>
@@ -656,11 +656,11 @@
                     <div id="registerFields" style="display: none;">
                         <div class="form-group">
                             <label data-i18n="name">Имя</label>
-                            <input type="text" id="regName" class="form-input" placeholder="Иван Иванов">
+                            <input type="text" id="regName" class="form-input" data-i18n-placeholder="name" placeholder="Иван Иванов">
                         </div>
                         <div class="form-group">
                             <label data-i18n="phone">Телефон</label>
-                            <input type="tel" id="regPhone" class="form-input" placeholder="+7 777 123 45 67">
+                            <input type="tel" id="regPhone" class="form-input" data-i18n-placeholder="phone" placeholder="+7 777 123 45 67">
                         </div>
                     </div>
                     
@@ -671,13 +671,13 @@
                     
                     <div class="form-group">
                         <label data-i18n="password">Пароль</label>
-                        <input type="password" id="authPassword" class="form-input" required placeholder="••••••••">
+                        <input type="password" id="authPassword" class="form-input" required data-i18n-placeholder="password" placeholder="••••••••">
                     </div>
                     
                     <div id="regConfirmField" style="display: none;">
                         <div class="form-group">
                             <label data-i18n="confirmPassword">Подтвердите пароль</label>
-                            <input type="password" id="regConfirm" class="form-input" placeholder="••••••••">
+                            <input type="password" id="regConfirm" class="form-input" data-i18n-placeholder="confirmPassword" placeholder="••••••••">
                         </div>
                     </div>
                     
@@ -918,22 +918,22 @@
                     
                     <div class="form-group">
                         <label data-i18n="title">Заголовок</label>
-                        <input type="text" id="reviewTitle" class="form-input" required placeholder="Кратко о поездке">
+                        <input type="text" id="reviewTitle" class="form-input" required data-i18n-placeholder="briefly_about_trip" placeholder="Кратко о поездке">
                     </div>
                     
                     <div class="form-group">
                         <label data-i18n="review">Отзыв</label>
-                        <textarea id="reviewText" class="form-input" rows="4" required placeholder="Поделитесь впечатлениями о поездке"></textarea>
+                        <textarea id="reviewText" class="form-input" rows="4" required data-i18n-placeholder="share_impressions" placeholder="Поделитесь впечатлениями о поездке"></textarea>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
                             <label data-i18n="pros">Плюсы</label>
-                            <input type="text" id="reviewPros" class="form-input" placeholder="Чисто, комфортно, вежливый водитель">
+                            <input type="text" id="reviewPros" class="form-input" data-i18n-placeholder="pros_placeholder" placeholder="Чисто, комфортно, вежливый водитель">
                         </div>
                         <div class="form-group">
                             <label data-i18n="cons">Минусы</label>
-                            <input type="text" id="reviewCons" class="form-input" placeholder="Опоздание, холодно">
+                            <input type="text" id="reviewCons" class="form-input" data-i18n-placeholder="cons_placeholder" placeholder="Опоздание, холодно">
                         </div>
                     </div>
                     
@@ -963,4 +963,4 @@
     <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
